@@ -91,6 +91,7 @@ resource "aws_cloudwatch_metric_alarm" "main" {
   evaluation_periods  = 1
   metric_name         = "ServiceLimitUsage"
   namespace           = "AWS/TrustedAdvisor"
+  ok_actions          = var.cloudwatch_alarm_actions
   period              = 3600
   statistic           = "Average"
   tags                = var.tags

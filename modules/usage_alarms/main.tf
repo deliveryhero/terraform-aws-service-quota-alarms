@@ -88,6 +88,7 @@ resource "aws_cloudwatch_metric_alarm" "main" {
   comparison_operator = "GreaterThanThreshold"
   datapoints_to_alarm = 1
   evaluation_periods  = 1
+  ok_actions          = var.cloudwatch_alarm_actions
   tags                = var.tags
   threshold           = var.cloudwatch_alarm_threshold
 
