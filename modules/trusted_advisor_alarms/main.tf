@@ -68,7 +68,7 @@ locals {
             service_limit = service_limit
           }
         ]
-      ]
+      ] if !contains(var.disabled_services, service_name)
     ]
   )
 
@@ -84,7 +84,7 @@ locals {
 resource "aws_cloudwatch_metric_alarm" "main" {
   for_each            = var.enabled ? local.resources : {}
   alarm_actions       = var.cloudwatch_alarm_actions
-  alarm_description   = "${each.value.service_name} ${each.value.service_limit} quota usage too high"
+  alarm_description   = "Service '${each.value.service_name}' quota '${each.value.service_limit}' usage too high in region '${each.value.region}'"
   alarm_name          = each.key
   comparison_operator = "GreaterThanThreshold"
   datapoints_to_alarm = 1
@@ -93,8 +93,8 @@ resource "aws_cloudwatch_metric_alarm" "main" {
   namespace           = "AWS/TrustedAdvisor"
   period              = 3600
   statistic           = "Average"
-  tags                = var.cloudwatch_alarm_tags
-  threshold           = var.cloudwatch_alarm_threshold
+  tags                = var.tags
+  threshold           = var.cloudwatch_alarm_threshold / 100
   treat_missing_data  = "ignore"
 
   dimensions = {

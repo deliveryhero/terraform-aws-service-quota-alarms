@@ -7,8 +7,7 @@ locals {
     #   }
     #
     # Note:
-    #  A commented service limit means that the metric is in cloudwatch but does not support
-    #  the SERVICE_QUOTA query function yet. Perhaps support will be added by AWS soon.
+    #  Some metrcs do not support the SERVICE_QUOTA query function yet so are not listed here
     #
     AutoScaling = {
       None = ["NumberOfAutoScalingGroup"]
@@ -16,22 +15,10 @@ locals {
     CloudWatch = {
       None = ["InsightRule"]
     }
-    DMS = {
-      None = [
-        # "AllocatedStorage",
-        # "Endpoints",
-        # "EndpointsPerInstance",
-        # "ReplicationInstances",
-        # "ReplicationSubnetGroups",
-        # "ReplicationTasks",
-        # "SubnetsPerReplicationSubnetGroup",
-      ]
-    }
     DynamoDB = {
       None = [
         "AccountProvisionedWriteCapacityUnits",
         "AccountProvisionedReadCapacityUnits",
-        # "TableCount",
       ]
     }
     EC2 = {
@@ -62,37 +49,12 @@ locals {
     Firehose = {
       None = ["DeliveryStreams"]
     }
-    RDS = {
-      None = [
-        # "ManualClusterSnapshots",
-        # "DBClusterParameterGroups",
-        # "ManualSnapshots",
-        # "DBInstances",
-        # "DBClusters",
-        # "DBParameterGroups",
-        # "DBSubnetGroups",
-        # "AllocatedStorage",
-      ]
-    }
-    SNS = {
-      None = ["NumberOfMessagesPublishedPerAccount"]
-    }
-    SageMaker = {
-      None = [
-        # "notebook-instance/total_volume_size_in_gb",
-        "notebook-instance/total_count",
-        "notebook-instance/ml.t2.medium",
-      ]
-    }
-    "Secrets Manager" = {
-      None = [
-        # "SecretCount"
-      ]
-    }
     SNS = {
       None = ["NumberOfMessagesPublishedPerAccount"]
     }
   }
+
+  # for region in var.regions : region => [for metric in local.metrics_normalized_all : metric if metric.region == region && metric.service_name == service_name]
 
   service_limit_classes = flatten(
     [
@@ -105,7 +67,7 @@ locals {
             resource     = resource
           }
         ]
-      ]
+      ] if !contains(var.disabled_services, service_name)
     ]
   )
 
@@ -121,12 +83,12 @@ locals {
 resource "aws_cloudwatch_metric_alarm" "main" {
   for_each            = var.enabled ? local.resources : {}
   alarm_actions       = var.cloudwatch_alarm_actions
-  alarm_description   = "${each.value.service_name} ${each.value.resource} quota usage too high"
+  alarm_description   = "Service '${each.value.service_name}' quota '${each.value.resource}' usage too high"
   alarm_name          = each.key
   comparison_operator = "GreaterThanThreshold"
   datapoints_to_alarm = 1
   evaluation_periods  = 1
-  tags                = var.cloudwatch_alarm_tags
+  tags                = var.tags
   threshold           = var.cloudwatch_alarm_threshold
 
   metric_query {

@@ -6,6 +6,15 @@ locals {
   ]
 }
 
+module "dashboard" {
+  source  = "../modules/dashboard"
+  regions = local.regions
+
+  providers = {
+    aws = aws.us-east-1
+  }
+}
+
 module "trusted_advisor_alarms" {
   source  = "../modules/trusted_advisor_alarms"
   regions = local.regions
@@ -14,7 +23,6 @@ module "trusted_advisor_alarms" {
     aws = aws.us-east-1
   }
 }
-
 
 module "usage_alarms_ap_southeast_1" {
   source = "../modules/usage_alarms"

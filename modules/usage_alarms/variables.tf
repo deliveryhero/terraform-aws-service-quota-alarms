@@ -1,3 +1,9 @@
+variable "disabled_services" {
+  description = "List of services to disable"
+  default     = []
+  type        = list(string)
+}
+
 variable "cloudwatch_alarm_actions" {
   default = []
   type    = list(string)
@@ -18,7 +24,7 @@ variable "cloudwatch_alarm_threshold" {
   type    = number
 }
 
-variable "cloudwatch_alarm_tags" {
+variable "tags" {
   type    = map(string)
   default = {}
 }
