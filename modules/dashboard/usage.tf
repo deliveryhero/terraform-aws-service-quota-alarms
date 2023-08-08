@@ -58,7 +58,7 @@ locals {
             label        = format("%s (%s): %s", service_name, class, resource)
           }
         ]
-      ]
+      ] if !contains(var.disabled_services, service_name)
     ]
   ])
 

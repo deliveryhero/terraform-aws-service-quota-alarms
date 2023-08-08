@@ -66,7 +66,7 @@ locals {
           id           = lower(replace(format("%s%s", service_name, resource), "/[\\W_]+/", ""))
           label        = format("%s: %s", service_name, resource)
         }
-      ]
+      ] if !contains(var.disabled_services, service_name)
     ]
   ])
 

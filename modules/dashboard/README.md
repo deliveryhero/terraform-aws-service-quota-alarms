@@ -25,7 +25,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_regions"></a> [regions](#input\_regions) | n/a | `list(string)` | `[]` | no |
+| <a name="input_disabled_services"></a> [disabled\_services](#input\_disabled\_services) | List of services to disable | `list(string)` | `[]` | no |
+| <a name="input_regions"></a> [regions](#input\_regions) | A list of AWS regions to create dashboard panels for | `list(string)` | `[]` | no |
 
 ## Outputs
 
