@@ -22,7 +22,7 @@ The modules will create alarms for all metrics from items 1 and 2b.
 
 It will not create alarms for items:
 
-- 2a: There is too many metrics here to make alarms and most of them do not have a corresponding quota that can be adjusted
+- 2a: These metrics do not support the `SERVICE_QUOTA` math function so an alarm threshold cannot be set
 - 2c: These do not look critical or useful
 
 ### Challenges of measuring service quota usage

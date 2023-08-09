@@ -32,6 +32,14 @@ locals {
       "Active Network Load Balancers",
       "Active load balancers",
     ]
+    IAM = [
+      "Policies",
+      "Groups",
+      "Users",
+      "Instance profiles",
+      "Server certificates",
+      "Roles",
+    ]
     Kinesis = [
       "Shards per region"
     ]
@@ -46,6 +54,13 @@ locals {
       "Storage quota (GB)",
       "Subnet groups",
       "Subnets per subnet group",
+    ]
+    Route53 = [
+      "Route 53 Max Health Checks",
+      "Route 53 Traffic Policy Instances",
+      "Route 53 Hosted Zones",
+      "Route 53 Reusable Delegation Sets",
+      "Route 53 Traffic Policies",
     ]
     SES = [
       "Daily sending quota"
