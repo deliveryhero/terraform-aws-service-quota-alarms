@@ -6,7 +6,25 @@ The modules in this repo will create CloudWatch alarms for all available, critic
 - [modules/usage_alarms](modules/usage_alarms): Creates alarms in the `AWS/Usage` namespace. This module needs to be defined for each region that is to be monitored.
 - [modules/dashboard](modules/dashboard): Creates a CloudWatch dashboard for all service quotas. This module should only be defined once in the `us-east-1` region.
 
+## Example
+
 See [example](example) for a full example implimentation of both modules, multiple regions and multiple terraform AWS providers.
+
+```hcl
+module "dashboard" {
+  source  = "git::https://github.com/deliveryhero/terraform-aws-service-quota-alarms.git//modules/dashboard?ref=1.4"
+  regions = ["us-east-1"]
+}
+
+module "trusted_advisor_alarms" {
+  source  = "git::https://github.com/deliveryhero/terraform-aws-service-quota-alarms.git//modules/trusted_advisor_alarms?ref=1.4"
+  regions = ["us-east-1"]
+}
+
+module "usage_alarms" {
+  source = "git::https://github.com/deliveryhero/terraform-aws-service-quota-alarms.git//modules/usage_alarms?ref=1.4"
+}
+```
 
 ## Details
 
