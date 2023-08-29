@@ -112,8 +112,8 @@ resource "aws_cloudwatch_metric_alarm" "main" {
       }
       metric_name = "ResourceCount"
       namespace   = "AWS/Usage"
-      period      = 3600
-      stat        = "Average"
+      period      = 300
+      stat        = each.value["resource"] == "NumberOfMessagesPublishedPerAccount" ? "Sum" : "Maximum"
     }
   }
 }
