@@ -107,8 +107,8 @@ resource "aws_cloudwatch_metric_alarm" "main" {
   metric_name         = "ServiceLimitUsage"
   namespace           = "AWS/TrustedAdvisor"
   ok_actions          = var.cloudwatch_alarm_actions
-  period              = 3600
-  statistic           = "Average"
+  period              = 300
+  statistic           = "Maximum"
   tags                = var.tags
   threshold           = var.cloudwatch_alarm_threshold / 100
   treat_missing_data  = "ignore"

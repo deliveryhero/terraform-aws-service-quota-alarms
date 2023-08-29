@@ -74,7 +74,7 @@ locals {
         {
           type = "metric"
           properties = {
-            stat   = "Sum"
+            stat   = "Maximum"
             region = region
             period = 300
             view   = "timeSeries"
@@ -91,7 +91,7 @@ locals {
               for metric in metrics : flatten([
                 [
                   "AWS/Usage", "ResourceCount", "Class", metric["class"], "Resource", metric["resource"], "Service", metric["service_name"], "Type", "Resource",
-                  { id = metric["id"], region = metric["region"], visible = false }
+                  { id = metric["id"], region = metric["region"], visible = false, "stat" = metric["resource"] == "NumberOfMessagesPublishedPerAccount" ? "Sum" : "Maximum" }
                 ]
               ])
               ],
