@@ -20,5 +20,5 @@ locals {
 
 resource "aws_cloudwatch_dashboard" "main" {
   dashboard_name = "ServiceQuotaUsage"
-  dashboard_body = jsonencode({ widgets = concat([local.usage_widget_header], local.usage_dashboard_widgets, [local.trusted_advisor_widget_header], local.trusted_advisor_dashboard_widgets) })
+  dashboard_body = jsonencode({ widgets = concat([local.usage_widget_header], local.usage_dashboard_widgets, [local.trusted_advisor_widget_header], local.trusted_advisor_dashboard_widgets, local.trusted_advisor_global_dashboard_widgets) })
 }

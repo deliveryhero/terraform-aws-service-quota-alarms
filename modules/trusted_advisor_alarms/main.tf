@@ -32,14 +32,6 @@ locals {
       "Active Network Load Balancers",
       "Active load balancers",
     ]
-    IAM = [
-      "Policies",
-      "Groups",
-      "Users",
-      "Instance profiles",
-      "Server certificates",
-      "Roles",
-    ]
     Kinesis = [
       "Shards per region"
     ]
@@ -54,13 +46,6 @@ locals {
       "Storage quota (GB)",
       "Subnet groups",
       "Subnets per subnet group",
-    ]
-    Route53 = [
-      "Route 53 Max Health Checks",
-      "Route 53 Traffic Policy Instances",
-      "Route 53 Hosted Zones",
-      "Route 53 Reusable Delegation Sets",
-      "Route 53 Traffic Policies",
     ]
     SES = [
       "Daily sending quota"
@@ -87,8 +72,39 @@ locals {
     ]
   )
 
+  service_limits_global = {
+    IAM = [
+      "Policies",
+      "Groups",
+      "Users",
+      "Instance profiles",
+      "Server certificates",
+      "Roles",
+    ]
+    Route53 = [
+      "Route 53 Max Health Checks",
+      "Route 53 Traffic Policy Instances",
+      "Route 53 Hosted Zones",
+      "Route 53 Reusable Delegation Sets",
+      "Route 53 Traffic Policies",
+    ]
+  }
+
+  service_limit_regions_global = flatten(
+    [
+      for service_name, limits in local.service_limits_global : [
+        for service_limit in limits : {
+          alarm_name    = format("%sglobal-%s-%s", var.alarm_name_prefix, service_name, replace(service_limit, "/[\\W_]+/", ""))
+          region        = "-"
+          service_name  = service_name
+          service_limit = service_limit
+        }
+      ] if !contains(var.disabled_services, service_name)
+    ]
+  )
+
   resources = {
-    for item in local.service_limit_regions : item.alarm_name => {
+    for item in concat(local.service_limit_regions, local.service_limit_regions_global) : item.alarm_name => {
       region        = item.region
       service_name  = item.service_name
       service_limit = item.service_limit
@@ -99,7 +115,7 @@ locals {
 resource "aws_cloudwatch_metric_alarm" "main" {
   for_each            = var.enabled ? local.resources : {}
   alarm_actions       = var.cloudwatch_alarm_actions
-  alarm_description   = "Service '${each.value.service_name}' quota '${each.value.service_limit}' usage too high in region '${each.value.region}'"
+  alarm_description   = "Service '${each.value.service_name}' quota '${each.value.service_limit}' (TrustedAdvisor) usage too high in region '${each.value.region}'"
   alarm_name          = each.key
   comparison_operator = "GreaterThanThreshold"
   datapoints_to_alarm = 1
