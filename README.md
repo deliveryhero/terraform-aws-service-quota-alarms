@@ -30,7 +30,7 @@ module "usage_alarms" {
 
 AWS service quotas can be monitored in 2 different CloudWatch namespaces:
 
-* 1\. `AWS/TrustedAdvisor`: These metrics come from the [Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) service and are simply represent usage of the specific quota limit as a percentage. This metrics are availble for all regions but are only visible in the `us-east-1` region.
+* 1\. `AWS/TrustedAdvisor`: These metrics come from the [Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) service and are simply represent usage of the specific quota limit as a percentage. These metrics are availble for all regions but are only visible in the `us-east-1` region.
 * 2\. `AWS/Usage`: There are many metrics in this namespace that are split by 3 different `metric_name`:
   * a) `CallCount`: Most of the metrics in this namespace are of this type and are about rate limits of specific API calls for each service
   * b) `ResourceCount`: These metrics are mostly about the count of certain resource types per service
