@@ -99,7 +99,7 @@ locals {
 resource "aws_cloudwatch_metric_alarm" "main" {
   for_each            = var.enabled ? local.resources : {}
   alarm_actions       = var.cloudwatch_alarm_actions
-  alarm_description   = "Service '${each.value.service_name}' quota '${each.value.service_limit}' usage too high in region '${each.value.region}'"
+  alarm_description   = "Service '${each.value.service_name}' quota '${each.value.service_limit}' (TrustedAdvisor) usage too high in region '${each.value.region}'"
   alarm_name          = each.key
   comparison_operator = "GreaterThanThreshold"
   datapoints_to_alarm = 1
