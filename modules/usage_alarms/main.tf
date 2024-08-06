@@ -49,6 +49,12 @@ locals {
     Firehose = {
       None = ["DeliveryStreams"]
     }
+    KMS = {
+      None = [
+        "CryptographicOperationsRsa",
+        "CryptographicOperationsSymmetric"
+      ]
+    }
     SNS = {
       None = ["NumberOfMessagesPublishedPerAccount"]
     }
