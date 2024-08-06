@@ -1,6 +1,6 @@
 
 locals {
-  service_limits = {
+  service_limits = merge(var.dp_services, {
     # Format:
     #   <service name> = {
     #     <limit class> = [<service limit>]
@@ -52,7 +52,7 @@ locals {
     SNS = {
       None = ["NumberOfMessagesPublishedPerAccount"]
     }
-  }
+  })
 
   # for region in var.regions : region => [for metric in local.metrics_normalized_all : metric if metric.region == region && metric.service_name == service_name]
 

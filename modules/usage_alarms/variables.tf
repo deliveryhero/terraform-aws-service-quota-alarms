@@ -33,3 +33,9 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "dp_services" {
+  description = "AWS Usage metrics to monitor"
+  type        = map(list(string))
+  default     = {}
+}
