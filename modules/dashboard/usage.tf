@@ -20,7 +20,7 @@ locals {
       "Standard/OnDemand" = [
         "vCPU"
       ]
-      "Standard/Spot"     = [
+      "Standard/Spot" = [
         "vCPU"
       ]
     }

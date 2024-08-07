@@ -12,10 +12,10 @@ jobs:
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -recursive -check
-      # - name: Terraform Validate
-      #   id: validate
-      #   run:
-      #     - cd example
-      #     - terraform init -backend=false
-      #     - terraform validate -no-color
-      #     - terraform fmt --check
+      - name: Terraform Validate
+        id: validate
+        run: |
+          cd example
+          terraform init -backend=false
+          terraform validate -no-color
+          terraform fmt --check
