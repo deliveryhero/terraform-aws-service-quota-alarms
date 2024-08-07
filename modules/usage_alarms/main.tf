@@ -114,7 +114,7 @@ resource "aws_cloudwatch_metric_alarm" "main" {
         "Class"    = each.value["class"]
         "Resource" = each.value["resource"]
         "Service"  = each.value["service_name"]
-        "Type"     = "Resource"
+        "Type"     = startswith(each.value["resource"], "CryptographicOperations") ? "API" : "Resource"
       }
       metric_name = startswith(each.value["resource"], "CryptographicOperations") ? "CallCount" : "ResourceCount"
       namespace   = "AWS/Usage"
