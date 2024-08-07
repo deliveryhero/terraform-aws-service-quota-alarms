@@ -1,47 +1,65 @@
 locals {
   usage_service_limits = {
     AutoScaling = {
-      None = ["NumberOfAutoScalingGroup"]
+      None = [
+        "NumberOfAutoScalingGroup"
+      ]
     }
     CloudWatch = {
-      None = ["InsightRule"]
+      None = [
+        "InsightRule"
+      ]
     }
     DynamoDB = {
       None = [
-        "AccountProvisionedWriteCapacityUnits",
         "AccountProvisionedReadCapacityUnits",
+        "AccountProvisionedWriteCapacityUnits",
       ]
     }
     EC2 = {
-      "Standard/OnDemand" = ["vCPU"]
-      "Standard/Spot"     = ["vCPU"]
+      "Standard/OnDemand" = [
+        "vCPU"
+      ]
+      "Standard/Spot"     = [
+        "vCPU"
+      ]
     }
     "Elastic Load Balancing" = {
       None = [
-        "TargetGroupsPerApplicationLoadBalancer",
-        "ListenersPerApplicationLoadBalancer",
-        "TargetsPerTargetGroupPerRegion",
-        "TargetsPerAvailabilityZonePerNetworkLoadBalancer",
-        "TargetsPerApplicationLoadBalancer",
-        "ListenersPerClassicLoadBalancer",
-        "RoutingRulesPerApplicationLoadBalancer",
-        "RegisteredInstancesPerClassicLoadBalancer",
-        "TargetsPerNetworkLoadBalancer",
+        "ApplicationLoadBalancersPerRegion",
+        "CertificatesPerApplicationLoadBalancer",
+        "CertificatesPerNetworkLoadBalancer",
         "ClassicLoadBalancersPerRegion",
+        "ListenersPerApplicationLoadBalancer",
+        "ListenersPerClassicLoadBalancer",
         "ListenersPerNetworkLoadBalancer",
         "NetworkLoadBalancersENIsPerVPC",
-        "CertificatesPerApplicationLoadBalancer",
-        "TargetGroupsPerRegion",
-        "CertificatesPerNetworkLoadBalancer",
-        "ApplicationLoadBalancersPerRegion",
         "NetworkLoadBalancersPerRegion",
+        "RegisteredInstancesPerClassicLoadBalancer",
+        "RoutingRulesPerApplicationLoadBalancer",
+        "TargetGroupsPerApplicationLoadBalancer",
+        "TargetGroupsPerRegion",
+        "TargetsPerApplicationLoadBalancer",
+        "TargetsPerAvailabilityZonePerNetworkLoadBalancer",
+        "TargetsPerNetworkLoadBalancer",
+        "TargetsPerTargetGroupPerRegion",
       ]
     }
     Firehose = {
-      None = ["DeliveryStreams"]
+      None = [
+        "DeliveryStreams"
+      ]
+    }
+    KMS = {
+      None = [
+        "CryptographicOperationsRsa",
+        "CryptographicOperationsSymmetric"
+      ]
     }
     SNS = {
-      None = ["NumberOfMessagesPublishedPerAccount"]
+      None = [
+        "NumberOfMessagesPublishedPerAccount"
+      ]
     }
   }
 
