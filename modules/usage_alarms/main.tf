@@ -116,7 +116,7 @@ resource "aws_cloudwatch_metric_alarm" "main" {
         "Service"  = each.value["service_name"]
         "Type"     = "Resource"
       }
-      metric_name = "ResourceCount"
+      metric_name = startswith(each.value["resource"], "CryptographicOperations") ? "CallCount" : "ResourceCount"
       namespace   = "AWS/Usage"
       period      = 300
       stat        = each.value["resource"] == "NumberOfMessagesPublishedPerAccount" ? "Sum" : "Maximum"
