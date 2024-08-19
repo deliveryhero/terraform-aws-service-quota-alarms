@@ -65,6 +65,12 @@ locals {
         "CryptographicOperationsSymmetric"
       ]
     }
+    KMS = {
+      None = [
+        "CryptographicOperationsRsa",
+        "CryptographicOperationsSymmetric"
+      ]
+    }
     SNS = {
       None = [
         "NumberOfMessagesPublishedPerAccount"
@@ -96,6 +102,8 @@ locals {
       resource     = item.resource
     }
   }
+
+  metrics_with_sum_Statistic = ["NumberOfMessagesPublishedPerAccount", "CryptographicOperationsRsa", "CryptographicOperationsSymmetric"]
 }
 
 resource "aws_cloudwatch_metric_alarm" "main" {
@@ -131,7 +139,7 @@ resource "aws_cloudwatch_metric_alarm" "main" {
       metric_name = startswith(each.value["resource"], "CryptographicOperations") ? "CallCount" : "ResourceCount"
       namespace   = "AWS/Usage"
       period      = 300
-      stat        = each.value["resource"] == "NumberOfMessagesPublishedPerAccount" ? "Sum" : "Maximum"
+      stat        = contains(local.metrics_with_sum_Statistic, each.value["resource"]) ? "Sum" : "Maximum"
     }
   }
 }
