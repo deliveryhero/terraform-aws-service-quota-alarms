@@ -87,7 +87,7 @@ locals {
     }
   }
 
-  metrics_with_sum_Statistic = ["NumberOfMessagesPublishedPerAccount", "CryptographicOperationsRsa", "CryptographicOperationsSymmetric" ]
+  metrics_with_sum_Statistic = ["NumberOfMessagesPublishedPerAccount", "CryptographicOperationsRsa", "CryptographicOperationsSymmetric"]
 }
 
 resource "aws_cloudwatch_metric_alarm" "main" {
