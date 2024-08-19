@@ -1,0 +1,21 @@
+name: Terraform checks
+
+on: [pull_request]
+
+jobs:
+  build:
+    name: lint and validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3.1.1
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt -recursive -check
+      - name: Terraform Validate
+        id: validate
+        run: |
+          cd example
+          terraform init -backend=false
+          terraform validate -no-color
+          terraform fmt --check
