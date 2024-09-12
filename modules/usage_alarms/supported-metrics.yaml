@@ -1,0 +1,3608 @@
+usage_metrics:
+    AWSUsage-CallCount-APICreateKeyKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CreateKey
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APICreateLogStreamLogsNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CreateLogStream
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-APICreateTopicSNSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CreateTopic
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-APICryptographicOperationsRsaKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CryptographicOperationsRsa
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIDeleteTopicSNSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DeleteTopic
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-APIDescribeAlarmHistoryCloudWatchNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeAlarmHistory
+            Service: CloudWatch
+            Type: API
+    AWSUsage-CallCount-APIDescribeAlarmsCloudWatchNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeAlarms
+            Service: CloudWatch
+            Type: API
+    AWSUsage-CallCount-APIDescribeDestinationsLogsNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeDestinations
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-APIDescribeMetricFiltersLogsNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeMetricFilters
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-APIDescribeTrailsCloudTrailNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeTrails
+            Service: CloudTrail
+            Type: API
+    AWSUsage-CallCount-APIEnableKeyRotationKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: EnableKeyRotation
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIGetAuthorizationTokenECRNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetAuthorizationToken
+            Service: ECR
+            Type: API
+    AWSUsage-CallCount-APIGetDownloadUrlForLayerECRNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetDownloadUrlForLayer
+            Service: ECR
+            Type: API
+    AWSUsage-CallCount-APIGetKeyRotationStatusKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetKeyRotationStatus
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIGetMetricDataCloudWatchNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetMetricData
+            Service: CloudWatch
+            Type: API
+    AWSUsage-CallCount-APIGetSubscriptionAttributesSNSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetSubscriptionAttributes
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-APIGetTopicAttributesSNSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetTopicAttributes
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-APIGetTrailStatusCloudTrailNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetTrailStatus
+            Service: CloudTrail
+            Type: API
+    AWSUsage-CallCount-APIInvocationsEventBridgeNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: Invocations
+            Service: EventBridge
+            Type: API
+    AWSUsage-CallCount-APIListAliasesKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListAliases
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIListKeysKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListKeys
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIListRequestedServiceQuotaChangeHistoryByQuotaServiceQuotasNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListRequestedServiceQuotaChangeHistoryByQuota
+            Service: Service Quotas
+            Type: API
+    AWSUsage-CallCount-APIListResourceTagsKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListResourceTags
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIListSinksObservabilityAccessManagerNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListSinks
+            Service: Observability Access Manager
+            Type: API
+    AWSUsage-CallCount-APIListTagsForResourceCloudWatchNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListTagsForResource
+            Service: CloudWatch
+            Type: API
+    AWSUsage-CallCount-APIListTopicsSNSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListTopics
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-APILookupEventsCloudTrailNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: LookupEvents
+            Service: CloudTrail
+            Type: API
+    AWSUsage-CallCount-APIPutKeyPolicyKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: PutKeyPolicy
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APIPutLogEventsLogsNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: PutLogEvents
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-APITagLogGroupLogsNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TagLogGroup
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-APITagResourceKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TagResource
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-APITagResourceSNSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TagResource
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-APIUntagLogGroupLogsNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: UntagLogGroup
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-APIUntagResourceKMSNone:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: UntagResource
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-CreateGrantKMSNoneAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CreateGrant
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-ECRNoneAPIBatchGetImage:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: BatchGetImage
+            Service: ECR
+            Type: API
+    AWSUsage-CallCount-GetKeyPolicyKMSNoneAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetKeyPolicy
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-KMSNoneAPICreateAlias:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CreateAlias
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-KMSNoneAPIDescribeKey:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeKey
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-KMSNoneAPIGetPublicKey:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetPublicKey
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-ListTagsForResourceSNSNoneAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListTagsForResource
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-ListTagsLogGroupLogsNoneAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListTagsLogGroup
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-LogsNoneAPIDescribeLogGroups:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeLogGroups
+            Service: Logs
+            Type: API
+    AWSUsage-CallCount-NoneAPICryptographicOperationsSymmetricKMS:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CryptographicOperationsSymmetric
+            Service: KMS
+            Type: API
+    AWSUsage-CallCount-NoneAPIGetServiceQuotaServiceQuotas:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: GetServiceQuota
+            Service: Service Quotas
+            Type: API
+    AWSUsage-CallCount-NoneAPIListClustersEMR:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListClusters
+            Service: EMR
+            Type: API
+    AWSUsage-CallCount-NoneAPIListMetricsCloudWatch:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListMetrics
+            Service: CloudWatch
+            Type: API
+    AWSUsage-CallCount-SNSNoneAPIListSubscriptions:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListSubscriptions
+            Service: SNS
+            Type: API
+    AWSUsage-CallCount-UntagResourceSNSNoneAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: UntagResource
+            Service: SNS
+            Type: API
+    AWSUsage-ResourceCount-AccountProvisionedReadCapacityUnitsDynamoDBNoneResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: AccountProvisionedReadCapacityUnits
+            Service: DynamoDB
+            Type: Resource
+    AWSUsage-ResourceCount-CertificatesPerApplicationLoadBalancerElasticLoadBalancingNoneResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CertificatesPerApplicationLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ClassicLoadBalancersPerRegionElasticLoadBalancingNoneResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ClassicLoadBalancersPerRegion
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ElasticLoadBalancingNoneResourceListenersPerClassicLoadBalancer:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListenersPerClassicLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ElasticLoadBalancingNoneResourceRegisteredInstancesPerClassicLoadBalancer:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: RegisteredInstancesPerClassicLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ElasticLoadBalancingNoneResourceTargetGroupsPerApplicationLoadBalancer:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TargetGroupsPerApplicationLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ElasticLoadBalancingNoneResourceTargetsPerAvailabilityZonePerNetworkLoadBalancer:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TargetsPerAvailabilityZonePerNetworkLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-NumberOfMessagesPublishedPerAccountSNSNoneResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Sum
+        dimensions:
+            Class: None
+            Resource: NumberOfMessagesPublishedPerAccount
+            Service: SNS
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceAccountProvisionedWriteCapacityUnitsDynamoDBNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: AccountProvisionedWriteCapacityUnits
+            Service: DynamoDB
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceApplicationLoadBalancersPerRegionElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ApplicationLoadBalancersPerRegion
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceApproximateNumberOfTopicsSNSNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ApproximateNumberOfTopics
+            Service: SNS
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceCertificatesPerNetworkLoadBalancerElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CertificatesPerNetworkLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceListenersPerApplicationLoadBalancerElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListenersPerApplicationLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceListenersPerNetworkLoadBalancerElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListenersPerNetworkLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceNetworkLoadBalancersENIsPerVPCElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: NetworkLoadBalancersENIsPerVPC
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceNetworkLoadBalancersPerRegionElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: NetworkLoadBalancersPerRegion
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceNumberOfAutoScalingGroupAutoScalingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: NumberOfAutoScalingGroup
+            Service: AutoScaling
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceRoutingRulesPerApplicationLoadBalancerElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: RoutingRulesPerApplicationLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceTargetsPerApplicationLoadBalancerElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TargetsPerApplicationLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceTargetsPerNetworkLoadBalancerElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TargetsPerNetworkLoadBalancer
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourceTargetsPerTargetGroupPerRegionElasticLoadBalancingNone:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TargetsPerTargetGroupPerRegion
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-ResourcevCPUEC2StandardOnDemand:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: Standard/OnDemand
+            Resource: vCPU
+            Service: EC2
+            Type: Resource
+    AWSUsage-ResourceCount-ResourcevCPUFargateStandardOnDemand:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: Standard/OnDemand
+            Resource: vCPU
+            Service: Fargate
+            Type: Resource
+    AWSUsage-ResourceCount-ResourcevCPUFargateStandardSpot:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: Standard/Spot
+            Resource: vCPU
+            Service: Fargate
+            Type: Resource
+    AWSUsage-ResourceCount-TargetGroupsPerRegionElasticLoadBalancingNoneResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: TargetGroupsPerRegion
+            Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-vCPUEC2StandardSpotResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: Standard/Spot
+            Resource: vCPU
+            Service: EC2
+            Type: Resource
+    AWSUsage-ThrottleCount-APIDescribeAlarmsCloudWatchNone:
+        namespace: AWS/Usage
+        metric_name: ThrottleCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: DescribeAlarms
+            Service: CloudWatch
+            Type: API
+    AWSUsage-ThrottleCount-APIListTagsForResourceCloudWatchNone:
+        namespace: AWS/Usage
+        metric_name: ThrottleCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListTagsForResource
+            Service: CloudWatch
+            Type: API
+    AWSUsage-ThrottleCount-ListMetricsCloudWatchNoneAPI:
+        namespace: AWS/Usage
+        metric_name: ThrottleCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListMetrics
+            Service: CloudWatch
+            Type: API
+trusted_advisor_metrics:
+    AWSTrustedAdvisor-ServiceLimitUsage-ActiveNetworkLoadBalancerseu-west-1ELB:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Active Network Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-Activesnapshotsca-central-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-Activesnapshotssa-east-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupseu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupseu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupseu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsme-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-central-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsme-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-south-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingAutoScalinggroupsus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsap-northeast-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-3
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationseu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsme-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-central-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsme-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-south-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationssa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalingLaunchconfigurationsus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalinggroupsap-northeast-3AutoScaling:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-3
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalinggroupseu-central-1AutoScaling:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-AutoScalinggroupssa-east-1AutoScaling:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-CloudFormationStackseu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Stacks
+            ServiceName: CloudFormation
+    AWSTrustedAdvisor-ServiceLimitUsage-CloudFormationStackseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Stacks
+            ServiceName: CloudFormation
+    AWSTrustedAdvisor-ServiceLimitUsage-Clusterparametergroupsap-southeast-1RDS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Cluster parameter groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-Clustersap-northeast-2RDS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Clusters
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-ColdHDD(sc1)volumestorage(TiB)sa-east-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-DBinstancesus-east-1RDS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: DB instances
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-Dailysendingquotaap-northeast-1SES:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-Dailysendingquotaeu-central-1SES:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityeu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityeu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityeu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityme-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-central-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityme-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-south-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBReadCapacityus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityap-northeast-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-3
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityeu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityeu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityeu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityme-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-central-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityme-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-south-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBDynamoDBWriteCapacityus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBReadCapacityap-northeast-1DynamoDB:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBReadCapacityeu-west-1DynamoDB:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBReadCapacitysa-east-1DynamoDB:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBWriteCapacityca-central-1DynamoDB:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-DynamoDBWriteCapacityeu-west-2DynamoDB:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotseu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotseu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotseu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotseu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSActivesnapshotsus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)ap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)ca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)eu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)eu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)eu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSColdHDD(sc1)volumestorage(TiB)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)ap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)ap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)ap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)eu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)eu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)eu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)eu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)sa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp2)volumestorage(TiB)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageeu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageeu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageeu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestoragesa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSGeneralPurposeSSD(gp3)volumestorageus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)ap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)ap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)ap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)ca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)eu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)eu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)eu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)eu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)sa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSMagnetic(standard)volumestorage(TiB)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)ap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)ap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)ap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)ca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)eu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)eu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)sa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPS(SSD)storage(TiB)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageeu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageeu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageeu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStoragesa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSSSD(io2)VolumeStorageus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSeu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSeu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSeu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSeu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSsa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSProvisionedIOPSus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)ap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)ap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)ap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)eu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)eu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)eu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)eu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)sa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EBSThroughputOptimizedHDD(st1)volumestorage(TiB)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)ap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)ap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)ca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)eu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)eu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)eu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ElasticIPaddresses(EIPs)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2On-Demandinstancesus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: On-Demand instances
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)ap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)ca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)eu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)eu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)eu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)sa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2ReservedInstances-purchaselimit(monthly)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2-VPCElasticIPaddresses(EIPs)ap-south-1VPC:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-EC2-VPCElasticIPaddresses(EIPs)eu-north-1VPC:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveApplicationLoadBalancersap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Active Application Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveApplicationLoadBalancersap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Active Application Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveApplicationLoadBalancerseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Active Application Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveApplicationLoadBalancersus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Active Application Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveNetworkLoadBalancersap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Active Network Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveNetworkLoadBalancersap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Active Network Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ELBActiveloadbalancerseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Active load balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-ElasticIPaddresses(EIPs)eu-west-3EC2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-GeneralPurposeSSD(gp2)volumestorage(TiB)eu-west-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-GeneralPurposeSSD(gp2)volumestorage(TiB)us-west-2EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-GeneralPurposeSSD(gp3)volumestorageap-northeast-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-GeneralPurposeSSD(gp3)volumestorageeu-west-3EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-IAMGroups-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Groups
+            ServiceName: IAM
+    AWSTrustedAdvisor-ServiceLimitUsage-IAMInstanceprofiles-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Instance profiles
+            ServiceName: IAM
+    AWSTrustedAdvisor-ServiceLimitUsage-IAMPolicies-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Policies
+            ServiceName: IAM
+    AWSTrustedAdvisor-ServiceLimitUsage-IAMRoles-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Roles
+            ServiceName: IAM
+    AWSTrustedAdvisor-ServiceLimitUsage-IAMServercertificates-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Server certificates
+            ServiceName: IAM
+    AWSTrustedAdvisor-ServiceLimitUsage-IAMUsers-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Users
+            ServiceName: IAM
+    AWSTrustedAdvisor-ServiceLimitUsage-Internetgatewaysap-northeast-1VPC:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-Internetgatewaysus-east-2VPC:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-Launchconfigurationsap-south-1AutoScaling:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-Launchconfigurationseu-central-1AutoScaling:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-Launchconfigurationseu-west-2AutoScaling:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-On-Demandinstancesap-northeast-2EC2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: On-Demand instances
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-On-Demandinstancesap-southeast-1EC2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: On-Demand instances
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPS(SSD)storage(TiB)eu-north-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPS(SSD)storage(TiB)eu-west-2EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPS(SSD)storage(TiB)eu-west-3EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Provisioned IOPS (SSD) storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSSSD(io2)VolumeStorageap-south-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSSSD(io2)VolumeStorageeu-central-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSSSD(io2)VolumeStorageeu-west-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSSSD(io2)VolumeStorageus-east-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSSSD(io2)VolumeStorageus-west-2EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSap-southeast-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ProvisionedIOPSeu-west-3EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSClusterparametergroupseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Cluster parameter groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSClustersap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Clusters
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSClusterseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Clusters
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSClustersus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Clusters
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSDBinstancesap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: DB instances
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSDBinstancesap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: DB instances
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSDBinstanceseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: DB instances
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSDBparametergroupseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: DB parameter groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSSubnetgroupsap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Subnet groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSSubnetgroupsap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Subnet groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSSubnetgroupseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Subnet groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSSubnetspersubnetgroupap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Subnets per subnet group
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-RDSSubnetspersubnetgroupus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Subnets per subnet group
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-ReservedInstances-purchaselimit(monthly)ap-southeast-2EC2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-ReservedInstances-purchaselimit(monthly)eu-central-1EC2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-ReservedInstances-purchaselimit(monthly)eu-west-1EC2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-Route53Route53HostedZones-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Route 53 Hosted Zones
+            ServiceName: Route53
+    AWSTrustedAdvisor-ServiceLimitUsage-Route53Route53MaxHealthChecks-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Route 53 Max Health Checks
+            ServiceName: Route53
+    AWSTrustedAdvisor-ServiceLimitUsage-Route53Route53ReusableDelegationSets-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Route 53 Reusable Delegation Sets
+            ServiceName: Route53
+    AWSTrustedAdvisor-ServiceLimitUsage-Route53Route53TrafficPolicies-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Route 53 Traffic Policies
+            ServiceName: Route53
+    AWSTrustedAdvisor-ServiceLimitUsage-Route53Route53TrafficPolicyInstances-:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: '-'
+            ServiceLimit: Route 53 Traffic Policy Instances
+            ServiceName: Route53
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaap-northeast-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-3
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaeu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaeu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaeu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotame-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: me-south-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotasa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-SESDailysendingquotaus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-Subnetspersubnetgroupap-southeast-1RDS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Subnets per subnet group
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-ThroughputOptimizedHDD(st1)volumestorage(TiB)ca-central-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ThroughputOptimizedHDD(st1)volumestorage(TiB)eu-west-1EBS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)ap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)ap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)ap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)ca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)eu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)eu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)eu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)eu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)sa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)us-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)us-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)us-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCEC2-VPCElasticIPaddresses(EIPs)us-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewaysap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewaysap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewaysap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewaysca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewayseu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewayseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewayseu-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewayseu-west-3:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewayssa-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewaysus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCInternetgatewaysus-west-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsap-northeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsap-northeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsap-south-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsap-southeast-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsap-southeast-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsca-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCseu-central-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCseu-north-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCseu-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsus-east-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsus-east-2:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCVPCsus-west-1:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCseu-west-2VPC:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-VPCssa-east-1VPC:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-northeast-1AutoScalingAutoScalinggroups:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-northeast-1EBSColdHDD(sc1)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-northeast-1EC2ElasticIPaddresses(EIPs):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-northeast-1VPCEC2-VPCElasticIPaddresses(EIPs):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-1
+            ServiceLimit: EC2-VPC Elastic IP addresses (EIPs)
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-northeast-2EBSThroughputOptimizedHDD(st1)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-2
+            ServiceLimit: Throughput Optimized HDD (st1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-northeast-3DynamoDBDynamoDBReadCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-northeast-3
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-south-1DynamoDBDynamoDBReadCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-south-1DynamoDBDynamoDBWriteCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-south-1EC2ReservedInstances-purchaselimit(monthly):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-south-1VPCInternetgateways:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-south-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-southeast-1EC2ReservedInstances-purchaselimit(monthly):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-southeast-2EBSActivesnapshots:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-southeast-2EBSColdHDD(sc1)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ap-southeast-2EBSProvisionedIOPS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ap-southeast-2
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-ca-central-1EBSGeneralPurposeSSD(gp2)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: ca-central-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-central-1EBSMagnetic(standard)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Magnetic (standard) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-central-1EC2ElasticIPaddresses(EIPs):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-central-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-north-1VPCInternetgateways:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-north-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-1DynamoDBDynamoDBWriteCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-1EC2On-Demandinstances:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: On-Demand instances
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-1RDSSubnetspersubnetgroup:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-1
+            ServiceLimit: Subnets per subnet group
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-2DynamoDBDynamoDBReadCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: DynamoDB Read Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-2EBSColdHDD(sc1)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-2EBSGeneralPurposeSSD(gp3)volumestorage:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-2
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-3AutoScalingLaunchconfigurations:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Launch configurations
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-3EBSColdHDD(sc1)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Cold HDD (sc1) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-3SESDailysendingquota:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: Daily sending quota
+            ServiceName: SES
+    AWSTrustedAdvisor-ServiceLimitUsage-eu-west-3VPCVPCs:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: eu-west-3
+            ServiceLimit: VPCs
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-sa-east-1DynamoDBDynamoDBWriteCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-sa-east-1EC2ElasticIPaddresses(EIPs):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: sa-east-1
+            ServiceLimit: Elastic IP addresses (EIPs)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-1EBSActivesnapshots:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Active snapshots
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-1EC2ReservedInstances-purchaselimit(monthly):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Reserved Instances - purchase limit (monthly)
+            ServiceName: EC2
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-1ELBActiveNetworkLoadBalancers:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Active Network Load Balancers
+            ServiceName: ELB
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-1RDSSubnetgroups:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-1
+            ServiceLimit: Subnet groups
+            ServiceName: RDS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-2EBSGeneralPurposeSSD(gp2)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-2EBSGeneralPurposeSSD(gp3)volumestorage:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-2EBSProvisionedIOPS:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Provisioned IOPS
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-east-2EBSProvisionedIOPSSSD(io2)VolumeStorage:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-east-2
+            ServiceLimit: Provisioned IOPS SSD (io2) Volume Storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-west-1AutoScalingAutoScalinggroups:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Auto Scaling groups
+            ServiceName: AutoScaling
+    AWSTrustedAdvisor-ServiceLimitUsage-us-west-1DynamoDBDynamoDBWriteCapacity:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: DynamoDB Write Capacity
+            ServiceName: DynamoDB
+    AWSTrustedAdvisor-ServiceLimitUsage-us-west-1EBSGeneralPurposeSSD(gp2)volumestorage(TiB):
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: General Purpose SSD (gp2) volume storage (TiB)
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-west-1VPCInternetgateways:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-1
+            ServiceLimit: Internet gateways
+            ServiceName: VPC
+    AWSTrustedAdvisor-ServiceLimitUsage-us-west-2EBSGeneralPurposeSSD(gp3)volumestorage:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: General Purpose SSD (gp3) volume storage
+            ServiceName: EBS
+    AWSTrustedAdvisor-ServiceLimitUsage-us-west-2VPCVPCs:
+        namespace: AWS/TrustedAdvisor
+        metric_name: ServiceLimitUsage
+        statistic: ""
+        dimensions:
+            Region: us-west-2
+            ServiceLimit: VPCs
+            ServiceName: VPC

@@ -1,5 +1,19 @@
 # terraform-aws-service-quota-alarms
 
+The goal of this repository was to create a comprehensive AWS service quota monitoring solution with an aim to have alarms for when a service quota limit is approached. This goal initially sounded simple but has proved to be anything but:
+
+1. Many AWS services do not have service quota usage metrics available, for example SQS
+2. Some service quota usage metrics have bugs, for example `ClassicLoadBalancersPerRegion` usage is measured against the default limit as opposed to the actual limit (AWS support case `13461384751`)
+3. Service quota usage metrics are split across 2 CloudWatch namespaces, each with their own challenges and differences:
+   1. `AWS/TrustedAdvisor`:
+      1. Not many service quotas are supported
+      2. Alarms can only be created in the `us-east-1` region but have a metric dimension to specify the region of the service quota
+   2. `AWS/Usage`:
+      1. Many service quotas metrics do not support the `SERVICE_QUOTA` math function required to calculate actual usage
+      2. There is no documented list of metrics that support the `SERVICE_QUOTA` math function and AWS will not provide this info (AWS support case `172297011100665`)
+      3. The statistic used to correctly calculate quota usage is inconsistent, requires trial and error. For example, the `SNS/NumberOfMessagesPublishedPerAccount` metric needs `Sum` statistic but most other metrics need `Maximum`
+      4. Alarms have to be created in each region
+
 The modules in this repo will create CloudWatch alarms for all available, critical AWS service quotas limits. Included are 3 terraform modules:
 
 - [modules/trusted_advisor_alarms](modules/trusted_advisor_alarms): Creates alarms in the `AWS/TrustedAdvisor` namespace for for quotas from multiple regions. This module should only be defined once in the `us-east-1` region.
