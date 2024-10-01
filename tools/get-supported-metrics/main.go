@@ -4,7 +4,10 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"maps"
 	"os"
+	"slices"
+	"sort"
 	"strings"
 	"time"
 
@@ -30,9 +33,10 @@ type SupportedMetrics struct {
 }
 
 var (
-	client         *cloudwatch.Client
-	configFilePath string
-	debugOutput    = false
+	client              *cloudwatch.Client
+	outputFile          string
+	debugOutput         = false
+	overwriteOutputFile = false
 	// Some metric resources require a specific statistic
 	usageMetricStatistics = map[string]map[string]string{
 		"SNS": {
@@ -47,14 +51,17 @@ func init() {
 		fmt.Fprint(os.Stderr, "A tool to get a list of CloudWatch metrics that allow the monitoring of service quota limits. It writes a YAML file with a list of metrics from the AWS/Usage and AWS/TrustedAdvisor namespaces.\n\n")
 		flag.PrintDefaults()
 	}
-	flag.StringVar(&configFilePath, "config-file", "supported-metrics.yaml", "A file to write the supported metrics to")
+	flag.StringVar(&outputFile, "output-file", "supported-metrics.yaml", "A file to write the supported metrics to")
 	flag.BoolVar(&debugOutput, "debug", false, "Enable debug output")
+	flag.BoolVar(&overwriteOutputFile, "overwrite", false, "Whether to overwrite the output file. Default behaviour is to append all metrics to the existing metrics in the file")
 	flag.Parse()
 }
 
 func main() {
 	if debugOutput {
 		zerolog.SetGlobalLevel(zerolog.DebugLevel)
+	} else {
+		zerolog.SetGlobalLevel(zerolog.InfoLevel)
 	}
 
 	cfg, err := config.LoadDefaultConfig(context.TODO())
@@ -81,11 +88,13 @@ func main() {
 	}
 	supportedMetrics.TrustAdvisorMetrics = trustedAdvisorMetrics
 
-	err = writeFile(configFilePath, supportedMetrics)
+	log.Info().Msgf("Supported metrics returned: %v (AWS/TrustedAdvisor), %v (AWS/Usage)", len(trustedAdvisorMetrics), len(usageMetrics))
+
+	err = writeFile(outputFile, supportedMetrics)
 	if err != nil {
 		log.Fatal().Msgf("error writing file: %v", err)
 	} else {
-		log.Info().Msgf("Successfully wrote supported metrics to %s", configFilePath)
+		log.Info().Msgf("Successfully wrote metrics to %s", outputFile)
 	}
 }
 
@@ -123,6 +132,7 @@ func getSupportedTrustedAdvisorMetrics() (map[string]Metric, error) {
 
 	for _, metric := range metrics {
 		convertedMetric := convertMetricType(metric)
+		convertedMetric.Statistic = "Maximum"
 		convertedMetricName := convertedMetric.GenerateNiceName()
 
 		if *metric.MetricName == "ServiceLimitUsage" {
@@ -138,25 +148,17 @@ func getSupportedTrustedAdvisorMetrics() (map[string]Metric, error) {
 
 func getMetricsForNamespace(client *cloudwatch.Client, namespace string) ([]types.Metric, error) {
 	var metrics []types.Metric
-	var nextToken *string
+	input := &cloudwatch.ListMetricsInput{
+		Namespace: aws.String(namespace),
+	}
 
-	for {
-		input := &cloudwatch.ListMetricsInput{
-			Namespace: aws.String(namespace),
-			NextToken: nextToken,
-		}
-
-		output, err := client.ListMetrics(context.TODO(), input)
+	paginator := cloudwatch.NewListMetricsPaginator(client, input, func(o *cloudwatch.ListMetricsPaginatorOptions) {})
+	for paginator.HasMorePages() {
+		page, err := paginator.NextPage(context.TODO())
 		if err != nil {
 			return nil, err
 		}
-
-		metrics = append(metrics, output.Metrics...)
-
-		nextToken = output.NextToken
-		if nextToken == nil {
-			break
-		}
+		metrics = append(metrics, page.Metrics...)
 	}
 
 	log.Debug().Msgf("Got %v metrics for namespace: %s", len(metrics), namespace)
@@ -199,8 +201,9 @@ func metricSupportsServiceQuotaFunction(metric types.Metric) bool {
 				Expression: aws.String("m1/SERVICE_QUOTA(m1)*100"),
 			},
 		},
-		StartTime: aws.Time(time.Now().Add(-1 * time.Hour)),
-		EndTime:   aws.Time(time.Now()),
+		StartTime:     aws.Time(time.Now().Add(-1 * time.Hour)),
+		EndTime:       aws.Time(time.Now()),
+		MaxDatapoints: aws.Int32(1),
 	}
 
 	_, err := client.GetMetricData(context.TODO(), input)
@@ -217,23 +220,53 @@ func metricSupportsServiceQuotaFunction(metric types.Metric) bool {
 }
 
 func writeFile(filePath string, metrics SupportedMetrics) error {
-	yamlData, err := yaml.Marshal(metrics)
-	if err != nil {
-		return fmt.Errorf("error marshalling YAML: %w", err)
+	if overwriteOutputFile || !fileExists(filePath) {
+		err := metrics.WriteYamlFile(filePath)
+		if err != nil {
+			return err
+		}
+		log.Info().Msgf("Metrics written: %v (AWS/TrustedAdvisor), %v (AWS/Usage)", len(metrics.TrustAdvisorMetrics), len(metrics.UsageMetrics))
+		return nil
 	}
 
-	return os.WriteFile(filePath, yamlData, 0644)
+	existingMetrics := SupportedMetrics{}
+	existingData, err := os.ReadFile(filePath)
+	if err != nil {
+		return fmt.Errorf("error reading existing file: %w", err)
+	}
+	if err := yaml.Unmarshal(existingData, &existingMetrics); err != nil {
+		return fmt.Errorf("error unmarshalling existing YAML: %w", err)
+	}
+
+	log.Info().Msgf("Existing metrics found: %v (AWS/TrustedAdvisor), %v (AWS/Usage)", len(existingMetrics.TrustAdvisorMetrics), len(existingMetrics.UsageMetrics))
+
+	metrics.MergeMetrics(existingMetrics)
+	err = metrics.WriteYamlFile(filePath)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func fileExists(path string) bool {
+	_, err := os.Stat(path)
+	return err == nil
 }
 
 func (m *Metric) GenerateNiceName() string {
 	result := fmt.Sprintf("%s-%s-", m.Namespace, m.MetricName)
 
-	for _, v := range m.Dimensions {
-		result = fmt.Sprintf("%s%s", result, v)
+	dimensionKeys := slices.Collect(maps.Keys(m.Dimensions))
+	sort.StringSlice(dimensionKeys).Sort()
+	for _, k := range dimensionKeys {
+		result = fmt.Sprintf("%s%s", result, m.Dimensions[k])
 	}
 
 	result = strings.ReplaceAll(result, "/", "")
 	result = strings.ReplaceAll(result, " ", "")
+	result = strings.ReplaceAll(result, "(", "")
+	result = strings.ReplaceAll(result, ")", "")
 
 	if len(result) > 230 {
 		result = result[:230]
@@ -258,5 +291,28 @@ func (m *Metric) SetUsageMetricStatistic() {
 
 	if m.Statistic == "" {
 		m.Statistic = usageMetricDefaultStatistic
+	}
+}
+
+func (s *SupportedMetrics) WriteYamlFile(filePath string) error {
+	yamlData, err := yaml.Marshal(s)
+	if err != nil {
+		return fmt.Errorf("error marshalling YAML: %w", err)
+	}
+
+	err = os.WriteFile(filePath, yamlData, 0644)
+	if err != nil {
+		return fmt.Errorf("error writing file '%s': %w", filePath, err)
+	}
+
+	return nil
+}
+
+func (s *SupportedMetrics) MergeMetrics(newMetrics SupportedMetrics) {
+	for k, v := range newMetrics.UsageMetrics {
+		s.UsageMetrics[k] = v
+	}
+	for k, v := range newMetrics.TrustAdvisorMetrics {
+		s.TrustAdvisorMetrics[k] = v
 	}
 }
