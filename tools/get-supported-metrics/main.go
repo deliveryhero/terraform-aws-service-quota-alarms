@@ -28,8 +28,9 @@ type Metric struct {
 }
 
 type SupportedMetrics struct {
-	UsageMetrics        map[string]Metric `yaml:"usage_metrics"`
-	TrustAdvisorMetrics map[string]Metric `yaml:"trusted_advisor_metrics"`
+	UsageMetrics                map[string]Metric `yaml:"usage_metrics"`
+	TrustAdvisorMetricsRegional map[string]Metric `yaml:"trusted_advisor_metrics_regional"`
+	TrustAdvisorMetricsGlobal   map[string]Metric `yaml:"trusted_advisor_metrics_global"`
 }
 
 var (
@@ -41,6 +42,10 @@ var (
 	usageMetricStatistics = map[string]map[string]string{
 		"SNS": {
 			"NumberOfMessagesPublishedPerAccount": "Sum",
+		},
+		"KMS": {
+			"CryptographicOperationsRsa":       "Sum",
+			"CryptographicOperationsSymmetric": "Sum",
 		},
 	}
 	usageMetricDefaultStatistic = "Maximum"
@@ -72,8 +77,9 @@ func main() {
 	client = cloudwatch.NewFromConfig(cfg)
 
 	supportedMetrics := SupportedMetrics{
-		UsageMetrics:        map[string]Metric{},
-		TrustAdvisorMetrics: map[string]Metric{},
+		UsageMetrics:                map[string]Metric{},
+		TrustAdvisorMetricsRegional: map[string]Metric{},
+		TrustAdvisorMetricsGlobal:   map[string]Metric{},
 	}
 
 	usageMetrics, err := getSupportedUsageMetrics()
@@ -82,13 +88,14 @@ func main() {
 	}
 	supportedMetrics.UsageMetrics = usageMetrics
 
-	trustedAdvisorMetrics, err := getSupportedTrustedAdvisorMetrics()
+	TAMetricsRegional, TAMetricsGlobal, err := getSupportedTrustedAdvisorMetrics()
 	if err != nil {
 		log.Fatal().Msg(err.Error())
 	}
-	supportedMetrics.TrustAdvisorMetrics = trustedAdvisorMetrics
+	supportedMetrics.TrustAdvisorMetricsGlobal = TAMetricsGlobal
+	supportedMetrics.TrustAdvisorMetricsRegional = TAMetricsRegional
 
-	log.Info().Msgf("Supported metrics returned: %v (AWS/TrustedAdvisor), %v (AWS/Usage)", len(trustedAdvisorMetrics), len(usageMetrics))
+	log.Info().Msgf("Supported metrics returned: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(TAMetricsRegional), len(TAMetricsGlobal), len(usageMetrics))
 
 	err = writeFile(outputFile, supportedMetrics)
 	if err != nil {
@@ -122,12 +129,13 @@ func getSupportedUsageMetrics() (map[string]Metric, error) {
 	return result, nil
 }
 
-func getSupportedTrustedAdvisorMetrics() (map[string]Metric, error) {
-	result := map[string]Metric{}
+func getSupportedTrustedAdvisorMetrics() (regionalResult map[string]Metric, globalResult map[string]Metric, err error) {
+	regionalResult = map[string]Metric{}
+	globalResult = map[string]Metric{}
 
 	metrics, err := getMetricsForNamespace(client, "AWS/TrustedAdvisor")
 	if err != nil {
-		return nil, fmt.Errorf("error getting AWS/TrustedAdvisor metrics: %s", err.Error())
+		return nil, nil, fmt.Errorf("error getting AWS/TrustedAdvisor metrics: %s", err.Error())
 	}
 
 	for _, metric := range metrics {
@@ -135,15 +143,26 @@ func getSupportedTrustedAdvisorMetrics() (map[string]Metric, error) {
 		convertedMetric.Statistic = "Maximum"
 		convertedMetricName := convertedMetric.GenerateNiceName()
 
-		if *metric.MetricName == "ServiceLimitUsage" {
-			log.Debug().Msgf("Metric supported: %s", convertedMetricName)
-			result[convertedMetricName] = convertedMetric
-		} else {
+		if *metric.MetricName != "ServiceLimitUsage" {
 			log.Debug().Msgf("Metric unsupported: %s", convertedMetricName)
+			continue
+		}
+
+		val, ok := convertedMetric.Dimensions["Region"]
+		if !ok {
+			return nil, nil, fmt.Errorf("region key not found in AWS/TrustedAdvisor metric %s", convertedMetricName)
+		}
+
+		log.Debug().Msgf("Metric supported: %s", convertedMetricName)
+
+		if val == "-" {
+			globalResult[convertedMetricName] = convertedMetric
+		} else {
+			regionalResult[convertedMetricName] = convertedMetric
 		}
 	}
 
-	return result, nil
+	return regionalResult, globalResult, nil
 }
 
 func getMetricsForNamespace(client *cloudwatch.Client, namespace string) ([]types.Metric, error) {
@@ -225,7 +244,7 @@ func writeFile(filePath string, metrics SupportedMetrics) error {
 		if err != nil {
 			return err
 		}
-		log.Info().Msgf("Metrics written: %v (AWS/TrustedAdvisor), %v (AWS/Usage)", len(metrics.TrustAdvisorMetrics), len(metrics.UsageMetrics))
+		log.Info().Msgf("Metrics written: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(metrics.TrustAdvisorMetricsRegional), len(metrics.TrustAdvisorMetricsGlobal), len(metrics.UsageMetrics))
 		return nil
 	}
 
@@ -238,7 +257,7 @@ func writeFile(filePath string, metrics SupportedMetrics) error {
 		return fmt.Errorf("error unmarshalling existing YAML: %w", err)
 	}
 
-	log.Info().Msgf("Existing metrics found: %v (AWS/TrustedAdvisor), %v (AWS/Usage)", len(existingMetrics.TrustAdvisorMetrics), len(existingMetrics.UsageMetrics))
+	log.Info().Msgf("Existing metrics found: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(existingMetrics.TrustAdvisorMetricsRegional), len(existingMetrics.TrustAdvisorMetricsGlobal), len(existingMetrics.UsageMetrics))
 
 	metrics.MergeMetrics(existingMetrics)
 	err = metrics.WriteYamlFile(filePath)
@@ -260,6 +279,9 @@ func (m *Metric) GenerateNiceName() string {
 	dimensionKeys := slices.Collect(maps.Keys(m.Dimensions))
 	sort.StringSlice(dimensionKeys).Sort()
 	for _, k := range dimensionKeys {
+		if k == "Region" && m.Namespace == "AWS/TrustedAdvisor" {
+			continue
+		}
 		result = fmt.Sprintf("%s%s", result, m.Dimensions[k])
 	}
 
@@ -276,6 +298,10 @@ func (m *Metric) GenerateNiceName() string {
 }
 
 func (m *Metric) SetUsageMetricStatistic() {
+	if m.Namespace != "AWS/Usage" {
+		return
+	}
+
 	_, ok := m.Dimensions["Service"]
 	if !ok {
 		return
@@ -312,7 +338,10 @@ func (s *SupportedMetrics) MergeMetrics(newMetrics SupportedMetrics) {
 	for k, v := range newMetrics.UsageMetrics {
 		s.UsageMetrics[k] = v
 	}
-	for k, v := range newMetrics.TrustAdvisorMetrics {
-		s.TrustAdvisorMetrics[k] = v
+	for k, v := range newMetrics.TrustAdvisorMetricsGlobal {
+		s.TrustAdvisorMetricsGlobal[k] = v
+	}
+	for k, v := range newMetrics.TrustAdvisorMetricsRegional {
+		s.TrustAdvisorMetricsRegional[k] = v
 	}
 }
