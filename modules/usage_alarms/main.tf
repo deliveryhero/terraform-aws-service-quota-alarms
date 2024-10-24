@@ -1,13 +1,18 @@
-
 locals {
-  metrics = yamldecode(file("${path.module}/supported-metrics.yaml"))["usage_metrics"]
+  data_file_path   = var.metric_data_file == null ? "${path.module}/supported-metrics.yaml" : var.metric_data_file
+  metrics          = yamldecode(data.local_file.metrics.content)["usage_metrics"]
+  filtered_metrics = { for alarm_name, config in local.metrics : alarm_name => config if !contains(var.disabled_services, config.dimensions["Service"]) }
+}
+
+data "local_file" "metrics" {
+  filename = local.data_file_path
 }
 
 resource "aws_cloudwatch_metric_alarm" "main" {
-  for_each            = var.enabled ? local.metrics : {}
+  for_each            = var.enabled ? local.filtered_metrics : {}
   alarm_actions       = var.cloudwatch_alarm_actions
-  alarm_description   = "Service '${each.value.dimensions.Service}' quota '${each.value.dimensions.Resource}' (CloudWatch SERVICE_QUOTA) usage too high"
-  alarm_name          = each.key
+  alarm_description   = "Service '${each.value.dimensions.Service}' quota '${each.value.dimensions.Resource}' quota usage too high"
+  alarm_name          = "${var.alarm_name_prefix}-${each.key}"
   comparison_operator = "GreaterThanThreshold"
   datapoints_to_alarm = 1
   evaluation_periods  = 1
@@ -27,12 +32,7 @@ resource "aws_cloudwatch_metric_alarm" "main" {
     return_data = false
 
     metric {
-      dimensions = {
-        "Class"    = each.value["dimensions"]["Class"]
-        "Resource" = each.value["dimensions"]["Resource"]
-        "Service"  = each.value["dimensions"]["Service"]
-        "Type"     = each.value["dimensions"]["Type"]
-      }
+      dimensions  = each.value["dimensions"]
       metric_name = each.value["metric_name"]
       namespace   = each.value["namespace"]
       period      = 300
