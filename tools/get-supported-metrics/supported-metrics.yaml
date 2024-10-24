@@ -512,6 +512,15 @@ usage_metrics:
             Resource: ListGrants
             Service: KMS
             Type: API
+    AWSUsage-CallCount-NoneListInstancesConnectAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListInstances
+            Service: Connect
+            Type: API
     AWSUsage-CallCount-NoneListKeyRotationsKMSAPI:
         namespace: AWS/Usage
         metric_name: CallCount
