@@ -16,9 +16,15 @@ variable "enabled" {
   type        = bool
 }
 
+variable "metric_data_file" {
+  description = "Path to YAML file containing the metrics to create alarms for. By default the one contained in the module will be used."
+  default     = null
+  type        = string
+}
+
 variable "alarm_name_prefix" {
   description = "A string prefix for all cloudwatch alarms"
-  default     = "service-quotas-"
+  default     = "ServiceQuota"
   type        = string
 }
 
