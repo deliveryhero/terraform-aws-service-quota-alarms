@@ -28,9 +28,9 @@ type Metric struct {
 }
 
 type SupportedMetrics struct {
-	UsageMetrics                map[string]Metric `yaml:"usage_metrics"`
-	TrustAdvisorMetricsRegional map[string]Metric `yaml:"trusted_advisor_metrics_regional"`
-	TrustAdvisorMetricsGlobal   map[string]Metric `yaml:"trusted_advisor_metrics_global"`
+	Usage                map[string]Metric `yaml:"usage"`
+	TrustAdvisorRegional map[string]Metric `yaml:"trusted_advisor_regional"`
+	TrustAdvisorGlobal   map[string]Metric `yaml:"trusted_advisor_global"`
 }
 
 var (
@@ -77,23 +77,23 @@ func main() {
 	client = cloudwatch.NewFromConfig(cfg)
 
 	supportedMetrics := SupportedMetrics{
-		UsageMetrics:                map[string]Metric{},
-		TrustAdvisorMetricsRegional: map[string]Metric{},
-		TrustAdvisorMetricsGlobal:   map[string]Metric{},
+		Usage:                map[string]Metric{},
+		TrustAdvisorRegional: map[string]Metric{},
+		TrustAdvisorGlobal:   map[string]Metric{},
 	}
 
 	usageMetrics, err := getSupportedUsageMetrics()
 	if err != nil {
 		log.Fatal().Msg(err.Error())
 	}
-	supportedMetrics.UsageMetrics = usageMetrics
+	supportedMetrics.Usage = usageMetrics
 
 	TAMetricsRegional, TAMetricsGlobal, err := getSupportedTrustedAdvisorMetrics()
 	if err != nil {
 		log.Fatal().Msg(err.Error())
 	}
-	supportedMetrics.TrustAdvisorMetricsGlobal = TAMetricsGlobal
-	supportedMetrics.TrustAdvisorMetricsRegional = TAMetricsRegional
+	supportedMetrics.TrustAdvisorGlobal = TAMetricsGlobal
+	supportedMetrics.TrustAdvisorRegional = TAMetricsRegional
 
 	log.Info().Msgf("Supported metrics returned: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(TAMetricsRegional), len(TAMetricsGlobal), len(usageMetrics))
 
@@ -115,7 +115,7 @@ func getSupportedUsageMetrics() (map[string]Metric, error) {
 
 	for _, metric := range metrics {
 		convertedMetric := convertMetricType(metric)
-		convertedMetricName := convertedMetric.GenerateNiceName()
+		convertedMetricName := convertedMetric.GetId()
 
 		if metricSupportsServiceQuotaFunction(metric) {
 			log.Debug().Msgf("Metric supported: %s", convertedMetricName)
@@ -141,7 +141,7 @@ func getSupportedTrustedAdvisorMetrics() (regionalResult map[string]Metric, glob
 	for _, metric := range metrics {
 		convertedMetric := convertMetricType(metric)
 		convertedMetric.Statistic = "Maximum"
-		convertedMetricName := convertedMetric.GenerateNiceName()
+		convertedMetricName := convertedMetric.GetId()
 
 		if *metric.MetricName != "ServiceLimitUsage" {
 			log.Debug().Msgf("Metric unsupported: %s", convertedMetricName)
@@ -244,7 +244,7 @@ func writeFile(filePath string, metrics SupportedMetrics) error {
 		if err != nil {
 			return err
 		}
-		log.Info().Msgf("Metrics written: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(metrics.TrustAdvisorMetricsRegional), len(metrics.TrustAdvisorMetricsGlobal), len(metrics.UsageMetrics))
+		log.Info().Msgf("Metrics written: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(metrics.TrustAdvisorRegional), len(metrics.TrustAdvisorGlobal), len(metrics.Usage))
 		return nil
 	}
 
@@ -257,7 +257,7 @@ func writeFile(filePath string, metrics SupportedMetrics) error {
 		return fmt.Errorf("error unmarshalling existing YAML: %w", err)
 	}
 
-	log.Info().Msgf("Existing metrics found: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(existingMetrics.TrustAdvisorMetricsRegional), len(existingMetrics.TrustAdvisorMetricsGlobal), len(existingMetrics.UsageMetrics))
+	log.Info().Msgf("Existing metrics found: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(existingMetrics.TrustAdvisorRegional), len(existingMetrics.TrustAdvisorGlobal), len(existingMetrics.Usage))
 
 	metrics.MergeMetrics(existingMetrics)
 	err = metrics.WriteYamlFile(filePath)
@@ -273,7 +273,7 @@ func fileExists(path string) bool {
 	return err == nil
 }
 
-func (m *Metric) GenerateNiceName() string {
+func (m *Metric) GetId() string {
 	result := fmt.Sprintf("%s-%s-", m.Namespace, m.MetricName)
 
 	dimensionKeys := slices.Collect(maps.Keys(m.Dimensions))
@@ -335,13 +335,13 @@ func (s *SupportedMetrics) WriteYamlFile(filePath string) error {
 }
 
 func (s *SupportedMetrics) MergeMetrics(newMetrics SupportedMetrics) {
-	for k, v := range newMetrics.UsageMetrics {
-		s.UsageMetrics[k] = v
+	for k, v := range newMetrics.Usage {
+		s.Usage[k] = v
 	}
-	for k, v := range newMetrics.TrustAdvisorMetricsGlobal {
-		s.TrustAdvisorMetricsGlobal[k] = v
+	for k, v := range newMetrics.TrustAdvisorGlobal {
+		s.TrustAdvisorGlobal[k] = v
 	}
-	for k, v := range newMetrics.TrustAdvisorMetricsRegional {
-		s.TrustAdvisorMetricsRegional[k] = v
+	for k, v := range newMetrics.TrustAdvisorRegional {
+		s.TrustAdvisorRegional[k] = v
 	}
 }
