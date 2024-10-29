@@ -21,10 +21,11 @@ import (
 )
 
 type Metric struct {
-	Namespace  string            `yaml:"namespace"`
-	MetricName string            `yaml:"metric_name"`
-	Statistic  string            `yaml:"statistic"`
-	Dimensions map[string]string `yaml:"dimensions"`
+	Namespace        string            `yaml:"namespace"`
+	MetricName       string            `yaml:"metric_name"`
+	Statistic        string            `yaml:"statistic"`
+	DashboardQueryId string            `yaml:"dashboard_query_id,omitempty"`
+	Dimensions       map[string]string `yaml:"dimensions"`
 }
 
 type DashboardData struct {
@@ -34,10 +35,15 @@ type DashboardData struct {
 }
 
 type SupportedMetrics struct {
-	Usage                map[string]Metric `yaml:"usage"`
-	TrustAdvisorRegional map[string]Metric `yaml:"trusted_advisor_regional"`
-	TrustAdvisorGlobal   map[string]Metric `yaml:"trusted_advisor_global"`
-	DashboardData        DashboardData     `yaml:"dashboard_data"`
+	Usage                     map[string]Metric `yaml:"usage"`
+	TrustAdvisorRegional      map[string]Metric `yaml:"trusted_advisor_regional"`
+	TrustAdvisorGlobal        map[string]Metric `yaml:"trusted_advisor_global"`
+	DashboardData             DashboardData     `yaml:"dashboard_data"`
+	UsageMetricSupportedCache Cache             `yaml:"usage_metric_supported"`
+}
+
+type Cache struct {
+	Cache map[string]bool `yaml:"cache"`
 }
 
 var (
@@ -56,6 +62,7 @@ var (
 		},
 	}
 	usageMetricDefaultStatistic = "Maximum"
+	usageMetricSupportedCache   = Cache{}
 )
 
 func init() {
@@ -67,6 +74,8 @@ func init() {
 	flag.BoolVar(&debugOutput, "debug", false, "Enable debug output")
 	flag.BoolVar(&overwriteOutputFile, "overwrite", false, "Whether to overwrite the output file. Default behaviour is to append all metrics to the existing metrics in the file")
 	flag.Parse()
+
+	loadUsageMetricSupportedCache()
 }
 
 func main() {
@@ -208,6 +217,15 @@ func convertMetricType(input types.Metric) Metric {
 }
 
 func metricSupportsServiceQuotaFunction(metric types.Metric) bool {
+	convertedMetric := convertMetricType(metric)
+	convertedMetricName := convertedMetric.GetId()
+
+	if _, ok := usageMetricSupportedCache.Cache[convertedMetricName]; ok {
+		return usageMetricSupportedCache.Cache[convertedMetricName]
+	}
+
+	usageMetricSupportedCache.Cache[convertedMetricName] = false
+
 	input := &cloudwatch.GetMetricDataInput{
 		MetricDataQueries: []types.MetricDataQuery{
 			{
@@ -242,6 +260,8 @@ func metricSupportsServiceQuotaFunction(metric types.Metric) bool {
 		}
 	}
 
+	usageMetricSupportedCache.Cache[convertedMetricName] = true
+
 	return true
 }
 
@@ -255,16 +275,10 @@ func writeFile(filePath string, metrics SupportedMetrics) error {
 		return nil
 	}
 
-	existingMetrics := SupportedMetrics{}
-	existingData, err := os.ReadFile(filePath)
+	existingMetrics, err := loadFile(filePath)
 	if err != nil {
-		return fmt.Errorf("error reading existing file: %w", err)
+		return fmt.Errorf("error reading existing metrics: %w", err)
 	}
-	if err := yaml.Unmarshal(existingData, &existingMetrics); err != nil {
-		return fmt.Errorf("error unmarshalling existing YAML: %w", err)
-	}
-
-	log.Info().Msgf("Existing metrics found: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global),%v (AWS/Usage)", len(existingMetrics.TrustAdvisorRegional), len(existingMetrics.TrustAdvisorGlobal), len(existingMetrics.Usage))
 
 	metrics.MergeMetrics(existingMetrics)
 	err = metrics.WriteYamlFile(filePath)
@@ -273,6 +287,23 @@ func writeFile(filePath string, metrics SupportedMetrics) error {
 	}
 
 	return nil
+}
+
+func loadFile(filePath string) (SupportedMetrics, error) {
+	result := SupportedMetrics{}
+
+	fileData, err := os.ReadFile(filePath)
+	if err != nil {
+		return result, fmt.Errorf("error reading existing file: %w", err)
+	}
+
+	if err := yaml.Unmarshal(fileData, &result); err != nil {
+		return result, fmt.Errorf("error unmarshalling existing YAML: %w", err)
+	}
+
+	log.Info().Msgf("Existing data loaded: %v (AWS/TrustedAdvisor regional), %v (AWS/TrustedAdvisor global), %v (AWS/Usage), %v cached Usage metrics", len(result.TrustAdvisorRegional), len(result.TrustAdvisorGlobal), len(result.Usage), len(result.UsageMetricSupportedCache.Cache))
+
+	return result, nil
 }
 
 func fileExists(path string) bool {
@@ -292,16 +323,29 @@ func (m *Metric) GetId() string {
 		result = fmt.Sprintf("%s%s", result, m.Dimensions[k])
 	}
 
-	result = strings.ReplaceAll(result, "/", "")
-	result = strings.ReplaceAll(result, " ", "")
-	result = strings.ReplaceAll(result, "(", "")
-	result = strings.ReplaceAll(result, ")", "")
+	result = cleanString(result)
 
 	if len(result) > 230 {
 		result = result[:230]
 	}
 
 	return result
+}
+
+func loadUsageMetricSupportedCache() {
+	usageMetricSupportedCache = Cache{}
+	usageMetricSupportedCache.Cache = make(map[string]bool)
+
+	data, err := loadFile(outputFile)
+	if err != nil {
+		return
+	}
+
+	if len(data.UsageMetricSupportedCache.Cache) > 0 {
+		usageMetricSupportedCache.Cache = data.UsageMetricSupportedCache.Cache
+	}
+
+	return
 }
 
 func (m *Metric) SetUsageMetricStatistic() {
@@ -332,11 +376,13 @@ func (s *SupportedMetrics) generateDashboardData() {
 	s.DashboardData.TrustAdvisorGlobal = make(map[string]map[string]Metric)
 	s.DashboardData.TrustAdvisorRegional = make(map[string]map[string]Metric)
 
+	// Sort all metrics by the service to allow for easier structure in terraform
 	for id, metric := range s.Usage {
 		serviceName := metric.Dimensions["Service"]
 		if _, ok := s.DashboardData.Usage[serviceName]; !ok {
 			s.DashboardData.Usage[serviceName] = make(map[string]Metric)
 		}
+		metric.setDashboardQueryId()
 		s.DashboardData.Usage[serviceName][id] = metric
 	}
 
@@ -345,6 +391,7 @@ func (s *SupportedMetrics) generateDashboardData() {
 		if _, ok := s.DashboardData.TrustAdvisorRegional[serviceName]; !ok {
 			s.DashboardData.TrustAdvisorRegional[serviceName] = make(map[string]Metric)
 		}
+		metric.setDashboardQueryId()
 		s.DashboardData.TrustAdvisorRegional[serviceName][id] = metric
 	}
 
@@ -353,12 +400,41 @@ func (s *SupportedMetrics) generateDashboardData() {
 		if _, ok := s.DashboardData.TrustAdvisorGlobal[serviceName]; !ok {
 			s.DashboardData.TrustAdvisorGlobal[serviceName] = make(map[string]Metric)
 		}
+		metric.setDashboardQueryId()
 		s.DashboardData.TrustAdvisorGlobal[serviceName][id] = metric
 	}
 }
 
+func (m *Metric) setDashboardQueryId() {
+	result := ""
+
+	switch m.Namespace {
+	case "AWS/Usage":
+		result = m.Dimensions["Resource"]
+	case "AWS/TrustedAdvisor":
+		result = m.Dimensions["ServiceLimit"]
+	}
+
+	result = cleanString(result)
+	result = strings.ReplaceAll(result, "-", "")
+	result = strings.ReplaceAll(result, ".", "")
+	result = strings.ReplaceAll(result, "_", "")
+	m.DashboardQueryId = strings.ToLower(result)
+}
+
+func cleanString(s string) string {
+	s = strings.ReplaceAll(s, "/", "")
+	s = strings.ReplaceAll(s, " ", "")
+	s = strings.ReplaceAll(s, "(", "")
+	s = strings.ReplaceAll(s, ")", "")
+	s = strings.ReplaceAll(s, ":", "")
+
+	return s
+}
+
 func (s *SupportedMetrics) WriteYamlFile(filePath string) error {
 	s.generateDashboardData()
+	s.UsageMetricSupportedCache.Cache = usageMetricSupportedCache.Cache
 
 	yamlData, err := yaml.Marshal(s)
 	if err != nil {
