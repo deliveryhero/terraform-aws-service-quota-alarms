@@ -1,6 +1,6 @@
 locals {
   data_file_path   = var.metric_data_file == null ? "${path.module}/supported-metrics.yaml" : var.metric_data_file
-  regional_metrics = yamldecode(data.local_file.metrics.content)["trusted_advisor_metrics_regional"]
+  regional_metrics = yamldecode(data.local_file.metrics.content)["trusted_advisor_regional"]
   filtered_regional_metrics = flatten([
     for region in var.regions : [
       for alarm_name, config in local.regional_metrics : {
@@ -12,7 +12,7 @@ locals {
     ]
   ])
 
-  global_metrics          = yamldecode(data.local_file.metrics.content)["trusted_advisor_metrics_global"]
+  global_metrics          = yamldecode(data.local_file.metrics.content)["trusted_advisor_global"]
   filtered_global_metrics = { for alarm_name, config in local.global_metrics : alarm_name => config if !contains(var.disabled_services, config.dimensions["ServiceName"]) }
 }
 

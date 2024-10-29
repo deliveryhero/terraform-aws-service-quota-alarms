@@ -1,6 +1,6 @@
 locals {
   data_file_path   = var.metric_data_file == null ? "${path.module}/supported-metrics.yaml" : var.metric_data_file
-  metrics          = yamldecode(data.local_file.metrics.content)["usage_metrics"]
+  metrics          = yamldecode(data.local_file.metrics.content)["usage"]
   filtered_metrics = { for alarm_name, config in local.metrics : alarm_name => config if !contains(var.disabled_services, config.dimensions["Service"]) }
 }
 

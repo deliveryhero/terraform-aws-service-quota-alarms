@@ -27,10 +27,17 @@ type Metric struct {
 	Dimensions map[string]string `yaml:"dimensions"`
 }
 
+type DashboardData struct {
+	Usage                map[string]map[string]Metric `yaml:"usage"`
+	TrustAdvisorRegional map[string]map[string]Metric `yaml:"trusted_advisor_regional"`
+	TrustAdvisorGlobal   map[string]map[string]Metric `yaml:"trusted_advisor_global"`
+}
+
 type SupportedMetrics struct {
 	Usage                map[string]Metric `yaml:"usage"`
 	TrustAdvisorRegional map[string]Metric `yaml:"trusted_advisor_regional"`
 	TrustAdvisorGlobal   map[string]Metric `yaml:"trusted_advisor_global"`
+	DashboardData        DashboardData     `yaml:"dashboard_data"`
 }
 
 var (
@@ -320,7 +327,39 @@ func (m *Metric) SetUsageMetricStatistic() {
 	}
 }
 
+func (s *SupportedMetrics) generateDashboardData() {
+	s.DashboardData.Usage = make(map[string]map[string]Metric)
+	s.DashboardData.TrustAdvisorGlobal = make(map[string]map[string]Metric)
+	s.DashboardData.TrustAdvisorRegional = make(map[string]map[string]Metric)
+
+	for id, metric := range s.Usage {
+		serviceName := metric.Dimensions["Service"]
+		if _, ok := s.DashboardData.Usage[serviceName]; !ok {
+			s.DashboardData.Usage[serviceName] = make(map[string]Metric)
+		}
+		s.DashboardData.Usage[serviceName][id] = metric
+	}
+
+	for id, metric := range s.TrustAdvisorRegional {
+		serviceName := metric.Dimensions["ServiceName"]
+		if _, ok := s.DashboardData.TrustAdvisorRegional[serviceName]; !ok {
+			s.DashboardData.TrustAdvisorRegional[serviceName] = make(map[string]Metric)
+		}
+		s.DashboardData.TrustAdvisorRegional[serviceName][id] = metric
+	}
+
+	for id, metric := range s.TrustAdvisorGlobal {
+		serviceName := metric.Dimensions["ServiceName"]
+		if _, ok := s.DashboardData.TrustAdvisorGlobal[serviceName]; !ok {
+			s.DashboardData.TrustAdvisorGlobal[serviceName] = make(map[string]Metric)
+		}
+		s.DashboardData.TrustAdvisorGlobal[serviceName][id] = metric
+	}
+}
+
 func (s *SupportedMetrics) WriteYamlFile(filePath string) error {
+	s.generateDashboardData()
+
 	yamlData, err := yaml.Marshal(s)
 	if err != nil {
 		return fmt.Errorf("error marshalling YAML: %w", err)
