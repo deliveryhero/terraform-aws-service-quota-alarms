@@ -410,7 +410,11 @@ func (m *Metric) setDashboardQueryId() {
 
 	switch m.Namespace {
 	case "AWS/Usage":
-		result = m.Dimensions["Resource"]
+		if m.Dimensions["Class"] == "None" {
+			result = m.Dimensions["Resource"]
+		} else {
+			result = fmt.Sprintf("%s%s", m.Dimensions["Class"], m.Dimensions["Resource"])
+		}
 	case "AWS/TrustedAdvisor":
 		result = m.Dimensions["ServiceLimit"]
 	}

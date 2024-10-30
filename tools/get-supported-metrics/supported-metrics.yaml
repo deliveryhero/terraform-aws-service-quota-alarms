@@ -1820,7 +1820,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: activequerycount
+                dashboard_query_id: ddlactivequerycount
                 dimensions:
                     Class: DDL
                     Resource: ActiveQueryCount
@@ -1830,7 +1830,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: activequerycount
+                dashboard_query_id: dmlactivequerycount
                 dimensions:
                     Class: DML
                     Resource: ActiveQueryCount
@@ -2288,7 +2288,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: vcpu
+                dashboard_query_id: gspotvcpu
                 dimensions:
                     Class: G/Spot
                     Resource: vCPU
@@ -2298,7 +2298,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: vcpu
+                dashboard_query_id: standardondemandvcpu
                 dimensions:
                     Class: Standard/OnDemand
                     Resource: vCPU
@@ -2308,7 +2308,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: vcpu
+                dashboard_query_id: standardspotvcpu
                 dimensions:
                     Class: Standard/Spot
                     Resource: vCPU
@@ -2318,7 +2318,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: vcpu
+                dashboard_query_id: xspotvcpu
                 dimensions:
                     Class: X/Spot
                     Resource: vCPU
@@ -2644,7 +2644,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: vcpu
+                dashboard_query_id: standardondemandvcpu
                 dimensions:
                     Class: Standard/OnDemand
                     Resource: vCPU
@@ -2654,7 +2654,7 @@ dashboard_data:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
                 statistic: Maximum
-                dashboard_query_id: vcpu
+                dashboard_query_id: standardspotvcpu
                 dimensions:
                     Class: Standard/Spot
                     Resource: vCPU
@@ -3811,6 +3811,7 @@ dashboard_data:
                     ServiceName: Route53
 usage_metric_supported:
     cache:
+        AWSUsage-CallCount-NoneAcceptVpcPeeringConnectionEC2API: false
         AWSUsage-CallCount-NoneAccessKubernetesApiEKSAPI: false
         AWSUsage-CallCount-NoneAddAttachmentsToSetSupportAPI: false
         AWSUsage-CallCount-NoneAddListenerCertificatesElasticLoadBalancingAPI: false
@@ -3870,6 +3871,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneCreateReportCostExplorerAPI: false
         AWSUsage-CallCount-NoneCreateRepositoryECRAPI: false
         AWSUsage-CallCount-NoneCreateReservedInstancesListingEC2API: false
+        AWSUsage-CallCount-NoneCreateRouteEC2API: false
         AWSUsage-CallCount-NoneCreateRuleElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneCreateSavingsPlanSavingsPlansAPI: false
         AWSUsage-CallCount-NoneCreateScheduleGroupSchedulerAPI: false
@@ -3896,6 +3898,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDeleteBucketPolicyS3API: false
         AWSUsage-CallCount-NoneDeleteBucketPublicAccessBlockS3API: false
         AWSUsage-CallCount-NoneDeleteBucketS3API: false
+        AWSUsage-CallCount-NoneDeleteCertificateCertificateManagerAPI: false
         AWSUsage-CallCount-NoneDeleteChangeSetCloudFormationAPI: false
         AWSUsage-CallCount-NoneDeleteDBClusterRDSAPI: false
         AWSUsage-CallCount-NoneDeleteDBClusterSnapshotRDSAPI: false
@@ -4341,6 +4344,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetFindingsSecurityHubAPI: false
         AWSUsage-CallCount-NoneGetFunction20150331v2LambdaAPI: false
         AWSUsage-CallCount-NoneGetFunctionCodeSigningConfigLambdaAPI: false
+        AWSUsage-CallCount-NoneGetFunctionConcurrencyLambdaAPI: false
         AWSUsage-CallCount-NoneGetFunctionConfiguration20150331LambdaAPI: false
         AWSUsage-CallCount-NoneGetFunctionConfiguration20150331v2LambdaAPI: false
         AWSUsage-CallCount-NoneGetFunctionEventInvokeConfigLambdaAPI: false
@@ -4731,6 +4735,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneRemovePermission20150331v2LambdaAPI: false
         AWSUsage-CallCount-NoneRemoveTagsElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneReplicateImageECRAPI: false
+        AWSUsage-CallCount-NoneRequestCertificateCertificateManagerAPI: false
         AWSUsage-CallCount-NoneResolveCaseSupportAPI: false
         AWSUsage-CallCount-NoneRestoreDBClusterFromSnapshotRDSAPI: false
         AWSUsage-CallCount-NoneReturnSavingsPlanSavingsPlansAPI: false

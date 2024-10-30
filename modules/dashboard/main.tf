@@ -35,6 +35,6 @@ data "local_file" "metrics" {
 }
 
 resource "aws_cloudwatch_dashboard" "main" {
-  dashboard_name = "ServiceQuotaUsageTest"
+  dashboard_name = "ServiceQuotaUsage"
   dashboard_body = jsonencode({ widgets = concat([local.usage_widget_header], local.filtered_usage_metrics, [local.trusted_advisor_regional_widget_header], local.filtered_regional_metrics, [local.trusted_advisor_global_widget_header], local.filtered_global_metrics) })
 }
