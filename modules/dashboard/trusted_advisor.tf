@@ -27,7 +27,7 @@ locals {
               ])
               ],
               [for id, metric_config in id : [
-                { expression = "${metric_config["dashboard_query_id"]}*100", label = format("%s: %s", service_name, metric_config["dimensions"]["ServiceLimit"])}
+                { expression = "${metric_config["dashboard_query_id"]}*100", label = format("%s: %s", service_name, metric_config["dimensions"]["ServiceLimit"]) }
               ]]
             )
           }

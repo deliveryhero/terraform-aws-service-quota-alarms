@@ -22,7 +22,7 @@ locals {
               for id, metric_config in id : flatten([
                 [
                   "AWS/Usage", metric_config["metric_name"], "Class", metric_config["dimensions"]["Class"], "Resource", metric_config["dimensions"]["Resource"], "Service", metric_config["dimensions"]["Service"], "Type", metric_config["dimensions"]["Type"],
-                  { id = metric_config["dashboard_query_id"], region = region, visible = false, stat = metric_config["statistic"]}
+                  { id = metric_config["dashboard_query_id"], region = region, visible = false, stat = metric_config["statistic"] }
                 ]
               ])
               ],

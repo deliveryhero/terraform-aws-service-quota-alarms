@@ -1,5 +1,5 @@
 locals {
-  data_file_path   = var.metric_data_file == null ? "${path.module}/supported-metrics.yaml" : var.metric_data_file
+  data_file_path = var.metric_data_file == null ? "${path.module}/supported-metrics.yaml" : var.metric_data_file
 
   usage_widget_header = {
     type   = "text"
