@@ -33,6 +33,6 @@ locals {
           }
         }
       ]
-    ]
+    ] if !contains(var.disabled_services, service_name)
   ])
 }
