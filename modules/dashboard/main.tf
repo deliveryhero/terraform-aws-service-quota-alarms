@@ -6,7 +6,7 @@ locals {
     width  = 24
     height = 2
     properties = {
-      "markdown" : "# Usage metrics \n### These metrics come from the `AWS/Usage` namespace [here](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#metricsV2?graph=~()&query=~'*7bAWS*2fUsage*2cClass*2cResource*2cService*2cType*7d*20AWS*2fUsage*20MetricName*3dResourceCount) \n"
+      "markdown" : "# Usage metrics \n### These metrics come from the `AWS/Usage` namespace \n"
     }
   }
 
