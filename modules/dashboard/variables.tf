@@ -9,3 +9,9 @@ variable "disabled_services" {
   default     = []
   type        = list(string)
 }
+
+variable "metric_data_file" {
+  description = "Path to YAML file containing the metrics to create alarms for. By default the one contained in the module will be used."
+  default     = null
+  type        = string
+}
