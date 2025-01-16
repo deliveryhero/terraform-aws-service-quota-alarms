@@ -1,5 +1,11 @@
 variable "disabled_services" {
-  description = "List of services to disable. See main.tf for list"
+  description = "List of services to disable. See supported-metrics.yaml for list"
+  default     = []
+  type        = list(string)
+}
+
+variable "disabled_alarms" {
+  description = "List of alarms to disable. See supported-metrics.yaml for list, it should be the YAML key, e.g. AWSTrustedAdvisor-ServiceLimitUsage-ActiveloadbalancersELB"
   default     = []
   type        = list(string)
 }

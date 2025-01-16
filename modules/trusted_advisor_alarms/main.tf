@@ -8,12 +8,12 @@ locals {
         statistic   = config["statistic"]
         metric_name = config["metric_name"]
         dimensions  = merge(config["dimensions"], { Region = region })
-      } if !contains(var.disabled_services, config.dimensions["ServiceName"])
+      } if !contains(var.disabled_services, config.dimensions["ServiceName"]) || !contains(var.disabled_alarms, alarm_name)
     ]
   ])
 
   global_metrics          = yamldecode(data.local_file.metrics.content)["trusted_advisor_global"]
-  filtered_global_metrics = { for alarm_name, config in local.global_metrics : alarm_name => config if !contains(var.disabled_services, config.dimensions["ServiceName"]) }
+  filtered_global_metrics = { for alarm_name, config in local.global_metrics : alarm_name => config if !contains(var.disabled_services, config.dimensions["ServiceName"]) || !contains(var.disabled_alarms, alarm_name) }
 }
 
 data "local_file" "metrics" {
