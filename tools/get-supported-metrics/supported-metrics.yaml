@@ -476,6 +476,15 @@ usage:
             Resource: ListAliases
             Service: KMS
             Type: API
+    AWSUsage-CallCount-NoneListClustersEMRAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListClusters
+            Service: EMR
+            Type: API
     AWSUsage-CallCount-NoneListDashboardsCloudWatchAPI:
         namespace: AWS/Usage
         metric_name: CallCount
@@ -584,6 +593,15 @@ usage:
             Resource: ListRequestedServiceQuotaChangeHistoryByQuota
             Service: Service Quotas
             Type: API
+    AWSUsage-CallCount-NoneListRequestedServiceQuotaChangeHistoryServiceQuotasAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListRequestedServiceQuotaChangeHistory
+            Service: Service Quotas
+            Type: API
     AWSUsage-CallCount-NoneListResourceTagsKMSAPI:
         namespace: AWS/Usage
         metric_name: CallCount
@@ -600,6 +618,15 @@ usage:
         dimensions:
             Class: None
             Resource: ListServiceQuotas
+            Service: Service Quotas
+            Type: API
+    AWSUsage-CallCount-NoneListServicesServiceQuotasAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListServices
             Service: Service Quotas
             Type: API
     AWSUsage-CallCount-NoneListSinksObservabilityAccessManagerAPI:
@@ -637,6 +664,15 @@ usage:
             Class: None
             Resource: ListTags
             Service: CloudTrail
+            Type: API
+    AWSUsage-CallCount-NoneListTagsForDeliveryStreamKinesisFirehoseAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ListTagsForDeliveryStream
+            Service: Kinesis Firehose
             Type: API
     AWSUsage-CallCount-NoneListTagsForResourceCloudWatchAPI:
         namespace: AWS/Usage
@@ -799,6 +835,15 @@ usage:
             Class: None
             Resource: SetTopicAttributes
             Service: SNS
+            Type: API
+    AWSUsage-CallCount-NoneStartAutomationExecutionSSMAPI:
+        namespace: AWS/Usage
+        metric_name: CallCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: StartAutomationExecution
+            Service: SSM
             Type: API
     AWSUsage-CallCount-NoneSubscribeSNSAPI:
         namespace: AWS/Usage
@@ -989,6 +1034,15 @@ usage:
             Resource: ApproximateNumberOfTopics
             Service: SNS
             Type: Resource
+    AWSUsage-ResourceCount-NoneCachesPerRegionElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: CachesPerRegion
+            Service: ElastiCache
+            Type: Resource
     AWSUsage-ResourceCount-NoneCertificatesPerApplicationLoadBalancerElasticLoadBalancingResource:
         namespace: AWS/Usage
         metric_name: ResourceCount
@@ -1079,6 +1133,15 @@ usage:
             Resource: InsightRule
             Service: CloudWatch
             Type: Resource
+    AWSUsage-ResourceCount-NoneKeysPerAccountKMSResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: KeysPerAccount
+            Service: KMS
+            Type: Resource
     AWSUsage-ResourceCount-NoneListenersPerApplicationLoadBalancerElasticLoadBalancingResource:
         namespace: AWS/Usage
         metric_name: ResourceCount
@@ -1106,6 +1169,15 @@ usage:
             Resource: ListenersPerNetworkLoadBalancer
             Service: Elastic Load Balancing
             Type: Resource
+    AWSUsage-ResourceCount-NoneMemcachedNodesPerClusterElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: MemcachedNodesPerCluster
+            Service: ElastiCache
+            Type: Resource
     AWSUsage-ResourceCount-NoneNetworkLoadBalancersENIsPerVPCElasticLoadBalancingResource:
         namespace: AWS/Usage
         metric_name: ResourceCount
@@ -1123,6 +1195,24 @@ usage:
             Class: None
             Resource: NetworkLoadBalancersPerRegion
             Service: Elastic Load Balancing
+            Type: Resource
+    AWSUsage-ResourceCount-NoneNodesPerClusterElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: NodesPerCluster
+            Service: ElastiCache
+            Type: Resource
+    AWSUsage-ResourceCount-NoneNodesPerRegionElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: NodesPerRegion
+            Service: ElastiCache
             Type: Resource
     AWSUsage-ResourceCount-NoneNumberOfAutoScalingGroupAutoScalingResource:
         namespace: AWS/Usage
@@ -1142,6 +1232,42 @@ usage:
             Resource: NumberOfMessagesPublishedPerAccount
             Service: SNS
             Type: Resource
+    AWSUsage-ResourceCount-NoneParameterGroupElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ParameterGroup
+            Service: ElastiCache
+            Type: Resource
+    AWSUsage-ResourceCount-NoneParentConcurrentAutomationUsageSSMResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ParentConcurrentAutomationUsage
+            Service: SSM
+            Type: Resource
+    AWSUsage-ResourceCount-NoneProxiesRDSResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: Proxies
+            Service: RDS
+            Type: Resource
+    AWSUsage-ResourceCount-NoneReadReplicasPerMasterRDSResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: ReadReplicasPerMaster
+            Service: RDS
+            Type: Resource
     AWSUsage-ResourceCount-NoneRegisteredInstancesPerClassicLoadBalancerElasticLoadBalancingResource:
         namespace: AWS/Usage
         metric_name: ResourceCount
@@ -1160,6 +1286,15 @@ usage:
             Resource: RoutingRulesPerApplicationLoadBalancer
             Service: Elastic Load Balancing
             Type: Resource
+    AWSUsage-ResourceCount-NoneSnapshotsPerDayPerCacheElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: SnapshotsPerDayPerCache
+            Service: ElastiCache
+            Type: Resource
     AWSUsage-ResourceCount-NoneStackInstanceOperationsCloudFormationResource:
         namespace: AWS/Usage
         metric_name: ResourceCount
@@ -1177,6 +1312,33 @@ usage:
             Class: None
             Resource: StackSets
             Service: CloudFormation
+            Type: Resource
+    AWSUsage-ResourceCount-NoneSubnetGroupElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: SubnetGroup
+            Service: ElastiCache
+            Type: Resource
+    AWSUsage-ResourceCount-NoneSubnetsPerDBSubnetGroupRDSResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: SubnetsPerDBSubnetGroup
+            Service: RDS
+            Type: Resource
+    AWSUsage-ResourceCount-NoneSubnetsPerSubnetGroupElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: SubnetsPerSubnetGroup
+            Service: ElastiCache
             Type: Resource
     AWSUsage-ResourceCount-NoneTargetGroupsPerApplicationLoadBalancerElasticLoadBalancingResource:
         namespace: AWS/Usage
@@ -1240,6 +1402,33 @@ usage:
             Class: None
             Resource: Trail
             Service: CloudTrail
+            Type: Resource
+    AWSUsage-ResourceCount-NoneUserElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: User
+            Service: ElastiCache
+            Type: Resource
+    AWSUsage-ResourceCount-NoneUserGroupElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: UserGroup
+            Service: ElastiCache
+            Type: Resource
+    AWSUsage-ResourceCount-NoneUsersPerUserGroupElastiCacheResource:
+        namespace: AWS/Usage
+        metric_name: ResourceCount
+        statistic: Maximum
+        dimensions:
+            Class: None
+            Resource: UsersPerUserGroup
+            Service: ElastiCache
             Type: Resource
     AWSUsage-ResourceCount-Noneendpointml.g4dn.xlargeSageMakerResource:
         namespace: AWS/Usage
@@ -2416,6 +2605,16 @@ dashboard_data:
                     Resource: DescribeCluster
                     Service: EMR
                     Type: API
+            AWSUsage-CallCount-NoneListClustersEMRAPI:
+                namespace: AWS/Usage
+                metric_name: CallCount
+                statistic: Maximum
+                dashboard_query_id: listclusters
+                dimensions:
+                    Class: None
+                    Resource: ListClusters
+                    Service: EMR
+                    Type: API
             AWSUsage-CallCount-NoneRunJobFlowEMRAPI:
                 namespace: AWS/Usage
                 metric_name: CallCount
@@ -2436,6 +2635,117 @@ dashboard_data:
                     Resource: TerminateJobFlows
                     Service: EMR
                     Type: API
+        ElastiCache:
+            AWSUsage-ResourceCount-NoneCachesPerRegionElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: cachesperregion
+                dimensions:
+                    Class: None
+                    Resource: CachesPerRegion
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneMemcachedNodesPerClusterElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: memcachednodespercluster
+                dimensions:
+                    Class: None
+                    Resource: MemcachedNodesPerCluster
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneNodesPerClusterElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: nodespercluster
+                dimensions:
+                    Class: None
+                    Resource: NodesPerCluster
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneNodesPerRegionElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: nodesperregion
+                dimensions:
+                    Class: None
+                    Resource: NodesPerRegion
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneParameterGroupElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: parametergroup
+                dimensions:
+                    Class: None
+                    Resource: ParameterGroup
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneSnapshotsPerDayPerCacheElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: snapshotsperdaypercache
+                dimensions:
+                    Class: None
+                    Resource: SnapshotsPerDayPerCache
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneSubnetGroupElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: subnetgroup
+                dimensions:
+                    Class: None
+                    Resource: SubnetGroup
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneSubnetsPerSubnetGroupElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: subnetspersubnetgroup
+                dimensions:
+                    Class: None
+                    Resource: SubnetsPerSubnetGroup
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneUserElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: user
+                dimensions:
+                    Class: None
+                    Resource: User
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneUserGroupElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: usergroup
+                dimensions:
+                    Class: None
+                    Resource: UserGroup
+                    Service: ElastiCache
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneUsersPerUserGroupElastiCacheResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: usersperusergroup
+                dimensions:
+                    Class: None
+                    Resource: UsersPerUserGroup
+                    Service: ElastiCache
+                    Type: Resource
         Elastic Load Balancing:
             AWSUsage-ResourceCount-NoneApplicationLoadBalancersPerRegionElasticLoadBalancingResource:
                 namespace: AWS/Usage
@@ -2873,6 +3183,27 @@ dashboard_data:
                     Resource: TagResource
                     Service: KMS
                     Type: API
+            AWSUsage-ResourceCount-NoneKeysPerAccountKMSResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: keysperaccount
+                dimensions:
+                    Class: None
+                    Resource: KeysPerAccount
+                    Service: KMS
+                    Type: Resource
+        Kinesis Firehose:
+            AWSUsage-CallCount-NoneListTagsForDeliveryStreamKinesisFirehoseAPI:
+                namespace: AWS/Usage
+                metric_name: CallCount
+                statistic: Maximum
+                dashboard_query_id: listtagsfordeliverystream
+                dimensions:
+                    Class: None
+                    Resource: ListTagsForDeliveryStream
+                    Service: Kinesis Firehose
+                    Type: API
         Location:
             AWSUsage-CallCount-NoneListPlaceIndexesLocationAPI:
                 namespace: AWS/Usage
@@ -3046,6 +3377,37 @@ dashboard_data:
                     Resource: ListSinks
                     Service: Observability Access Manager
                     Type: API
+        RDS:
+            AWSUsage-ResourceCount-NoneProxiesRDSResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: proxies
+                dimensions:
+                    Class: None
+                    Resource: Proxies
+                    Service: RDS
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneReadReplicasPerMasterRDSResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: readreplicaspermaster
+                dimensions:
+                    Class: None
+                    Resource: ReadReplicasPerMaster
+                    Service: RDS
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneSubnetsPerDBSubnetGroupRDSResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: subnetsperdbsubnetgroup
+                dimensions:
+                    Class: None
+                    Resource: SubnetsPerDBSubnetGroup
+                    Service: RDS
+                    Type: Resource
         S3:
             AWSUsage-ResourceCount-NoneGeneralPurposeBucketsS3Resource:
                 namespace: AWS/Usage
@@ -3249,6 +3611,16 @@ dashboard_data:
                     Service: SNS
                     Type: Resource
         SSM:
+            AWSUsage-CallCount-NoneStartAutomationExecutionSSMAPI:
+                namespace: AWS/Usage
+                metric_name: CallCount
+                statistic: Maximum
+                dashboard_query_id: startautomationexecution
+                dimensions:
+                    Class: None
+                    Resource: StartAutomationExecution
+                    Service: SSM
+                    Type: API
             AWSUsage-ResourceCount-NoneConcurrentAutomationUsageSSMResource:
                 namespace: AWS/Usage
                 metric_name: ResourceCount
@@ -3257,6 +3629,16 @@ dashboard_data:
                 dimensions:
                     Class: None
                     Resource: ConcurrentAutomationUsage
+                    Service: SSM
+                    Type: Resource
+            AWSUsage-ResourceCount-NoneParentConcurrentAutomationUsageSSMResource:
+                namespace: AWS/Usage
+                metric_name: ResourceCount
+                statistic: Maximum
+                dashboard_query_id: parentconcurrentautomationusage
+                dimensions:
+                    Class: None
+                    Resource: ParentConcurrentAutomationUsage
                     Service: SSM
                     Type: Resource
         SageMaker:
@@ -3351,6 +3733,16 @@ dashboard_data:
                     Resource: ListRequestedServiceQuotaChangeHistoryByQuota
                     Service: Service Quotas
                     Type: API
+            AWSUsage-CallCount-NoneListRequestedServiceQuotaChangeHistoryServiceQuotasAPI:
+                namespace: AWS/Usage
+                metric_name: CallCount
+                statistic: Maximum
+                dashboard_query_id: listrequestedservicequotachangehistory
+                dimensions:
+                    Class: None
+                    Resource: ListRequestedServiceQuotaChangeHistory
+                    Service: Service Quotas
+                    Type: API
             AWSUsage-CallCount-NoneListServiceQuotasServiceQuotasAPI:
                 namespace: AWS/Usage
                 metric_name: CallCount
@@ -3359,6 +3751,16 @@ dashboard_data:
                 dimensions:
                     Class: None
                     Resource: ListServiceQuotas
+                    Service: Service Quotas
+                    Type: API
+            AWSUsage-CallCount-NoneListServicesServiceQuotasAPI:
+                namespace: AWS/Usage
+                metric_name: CallCount
+                statistic: Maximum
+                dashboard_query_id: listservices
+                dimensions:
+                    Class: None
+                    Resource: ListServices
                     Service: Service Quotas
                     Type: API
         Textract:
@@ -3818,6 +4220,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneAddPermission20150331v2LambdaAPI: false
         AWSUsage-CallCount-NoneAddTagsElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneAddTagsToResourceRDSAPI: false
+        AWSUsage-CallCount-NoneAddTagsToResourceSSMAPI: false
         AWSUsage-CallCount-NoneAnalyzeDocumentTextractAPI: true
         AWSUsage-CallCount-NoneApplySecurityGroupsToLoadBalancerElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneAssignPrivateIpAddressesEC2API: false
@@ -3843,11 +4246,16 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneCreateAccessEntryEKSAPI: false
         AWSUsage-CallCount-NoneCreateAliasKMSAPI: true
         AWSUsage-CallCount-NoneCreateBucketS3API: false
+        AWSUsage-CallCount-NoneCreateCacheParameterGroupElastiCacheAPI: false
+        AWSUsage-CallCount-NoneCreateCacheSubnetGroupElastiCacheAPI: false
         AWSUsage-CallCount-NoneCreateCaseSupportAPI: false
         AWSUsage-CallCount-NoneCreateChangeSetCloudFormationAPI: false
+        AWSUsage-CallCount-NoneCreateDBClusterParameterGroupRDSAPI: false
         AWSUsage-CallCount-NoneCreateDBClusterRDSAPI: false
+        AWSUsage-CallCount-NoneCreateDBClusterSnapshotRDSAPI: false
         AWSUsage-CallCount-NoneCreateDBInstanceRDSAPI: false
         AWSUsage-CallCount-NoneCreateDBParameterGroupRDSAPI: false
+        AWSUsage-CallCount-NoneCreateDBSnapshotRDSAPI: false
         AWSUsage-CallCount-NoneCreateDBSubnetGroupRDSAPI: false
         AWSUsage-CallCount-NoneCreateEnvironmentCloudShellAPI: false
         AWSUsage-CallCount-NoneCreateEventSubscriptionRDSAPI: false
@@ -3900,6 +4308,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDeleteBucketS3API: false
         AWSUsage-CallCount-NoneDeleteCertificateCertificateManagerAPI: false
         AWSUsage-CallCount-NoneDeleteChangeSetCloudFormationAPI: false
+        AWSUsage-CallCount-NoneDeleteDBClusterParameterGroupRDSAPI: false
         AWSUsage-CallCount-NoneDeleteDBClusterRDSAPI: false
         AWSUsage-CallCount-NoneDeleteDBClusterSnapshotRDSAPI: false
         AWSUsage-CallCount-NoneDeleteDBInstanceRDSAPI: false
@@ -3914,6 +4323,8 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDeleteLoadBalancerElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneDeleteLogGroupLogsAPI: true
         AWSUsage-CallCount-NoneDeleteNetworkInterfaceEC2API: false
+        AWSUsage-CallCount-NoneDeleteParameterSSMAPI: false
+        AWSUsage-CallCount-NoneDeleteParametersSSMAPI: false
         AWSUsage-CallCount-NoneDeleteQueryDefinitionLogsAPI: false
         AWSUsage-CallCount-NoneDeleteQueueSQSAPI: false
         AWSUsage-CallCount-NoneDeleteReplicationGroupElastiCacheAPI: false
@@ -3934,6 +4345,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDeleteTopicSNSAPI: true
         AWSUsage-CallCount-NoneDeleteVolumeEC2API: false
         AWSUsage-CallCount-NoneDeregisterInstancesFromLoadBalancerElasticLoadBalancingAPI: false
+        AWSUsage-CallCount-NoneDeregisterScalableTargetEC2AutoScalingAPI: false
         AWSUsage-CallCount-NoneDeregisterTargetsElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneDeregisterTaskDefinitionECSAPI: false
         AWSUsage-CallCount-NoneDescribeACLsMemoryDBAPI: false
@@ -3946,6 +4358,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeAccountLimitsElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneDescribeAddonEKSAPI: false
         AWSUsage-CallCount-NoneDescribeAddonVersionsEKSAPI: false
+        AWSUsage-CallCount-NoneDescribeAddressTransfersEC2API: false
         AWSUsage-CallCount-NoneDescribeAddressesAttributeEC2API: false
         AWSUsage-CallCount-NoneDescribeAddressesEC2API: false
         AWSUsage-CallCount-NoneDescribeAffectedEntitiesAWSHealthAPIsAndNotificationsAPI: false
@@ -3960,6 +4373,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeAvailabilityZonesEC2API: false
         AWSUsage-CallCount-NoneDescribeBackupsCloudHSMAPI: false
         AWSUsage-CallCount-NoneDescribeBlueGreenDeploymentsRDSAPI: false
+        AWSUsage-CallCount-NoneDescribeBucketsMacieAPI: false
         AWSUsage-CallCount-NoneDescribeBudgetNotificationsForAccountBudgetsAPI: false
         AWSUsage-CallCount-NoneDescribeBudgetsBudgetsAPI: false
         AWSUsage-CallCount-NoneDescribeByoipCidrsEC2API: false
@@ -3969,6 +4383,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeCacheParametersElastiCacheAPI: false
         AWSUsage-CallCount-NoneDescribeCacheSubnetGroupsElastiCacheAPI: false
         AWSUsage-CallCount-NoneDescribeCapacityProvidersECSAPI: false
+        AWSUsage-CallCount-NoneDescribeCapacityReservationElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneDescribeCapacityReservationFleetsEC2API: false
         AWSUsage-CallCount-NoneDescribeCapacityReservationsEC2API: false
         AWSUsage-CallCount-NoneDescribeCarrierGatewaysEC2API: false
@@ -4022,11 +4437,13 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeDBSnapshotsRDSAPI: false
         AWSUsage-CallCount-NoneDescribeDBSubnetGroupsRDSAPI: false
         AWSUsage-CallCount-NoneDescribeDRTAccessShieldAPI: false
+        AWSUsage-CallCount-NoneDescribeDataProvidersDatabaseMigrationServiceAPI: false
         AWSUsage-CallCount-NoneDescribeDestinationsLogsAPI: true
         AWSUsage-CallCount-NoneDescribeDhcpOptionsEC2API: false
         AWSUsage-CallCount-NoneDescribeDimensionKeysPerformanceInsightsAPI: false
         AWSUsage-CallCount-NoneDescribeDirectConnectGatewaysDirectConnectAPI: false
         AWSUsage-CallCount-NoneDescribeDirectoriesDirectoryServiceAPI: false
+        AWSUsage-CallCount-NoneDescribeDocumentPermissionSSMAPI: false
         AWSUsage-CallCount-NoneDescribeDomainsCloudSearchAPI: false
         AWSUsage-CallCount-NoneDescribeEgressOnlyInternetGatewaysEC2API: false
         AWSUsage-CallCount-NoneDescribeEmergencyContactSettingsShieldAPI: false
@@ -4039,6 +4456,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeEventAggregatesAWSHealthAPIsAndNotificationsAPI: false
         AWSUsage-CallCount-NoneDescribeEventBusEventBridgeAPI: false
         AWSUsage-CallCount-NoneDescribeEventDetailsAWSHealthAPIsAndNotificationsAPI: false
+        AWSUsage-CallCount-NoneDescribeEventSubscriptionsDatabaseMigrationServiceAPI: false
         AWSUsage-CallCount-NoneDescribeEventSubscriptionsRDSAPI: false
         AWSUsage-CallCount-NoneDescribeEventSubscriptionsRedshiftAPI: false
         AWSUsage-CallCount-NoneDescribeEventsAWSHealthAPIsAndNotificationsAPI: false
@@ -4048,6 +4466,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeExportTasksRDSAPI: false
         AWSUsage-CallCount-NoneDescribeFileSystemPolicyEFSAPI: false
         AWSUsage-CallCount-NoneDescribeFileSystemsEFSAPI: false
+        AWSUsage-CallCount-NoneDescribeFileSystemsFSxAPI: false
         AWSUsage-CallCount-NoneDescribeFleetsAppStreamAPI: false
         AWSUsage-CallCount-NoneDescribeFleetsEC2API: false
         AWSUsage-CallCount-NoneDescribeFlowLogsEC2API: false
@@ -4072,7 +4491,12 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeInstanceCreditSpecificationsEC2API: false
         AWSUsage-CallCount-NoneDescribeInstanceEventWindowsEC2API: false
         AWSUsage-CallCount-NoneDescribeInstanceHealthElasticLoadBalancingAPI: false
+        AWSUsage-CallCount-NoneDescribeInstanceImageMetadataEC2API: false
+        AWSUsage-CallCount-NoneDescribeInstanceInformationSSMAPI: false
+        AWSUsage-CallCount-NoneDescribeInstancePatchStatesSSMAPI: false
+        AWSUsage-CallCount-NoneDescribeInstanceRefreshesEC2AutoScalingAPI: false
         AWSUsage-CallCount-NoneDescribeInstanceStatusEC2API: false
+        AWSUsage-CallCount-NoneDescribeInstanceTopologyEC2API: false
         AWSUsage-CallCount-NoneDescribeInstanceTypeOfferingsEC2API: false
         AWSUsage-CallCount-NoneDescribeInstanceTypesEC2API: false
         AWSUsage-CallCount-NoneDescribeInstancesEC2API: false
@@ -4099,6 +4523,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeLocalGatewayRouteTablesEC2API: false
         AWSUsage-CallCount-NoneDescribeLogGroupsLogsAPI: true
         AWSUsage-CallCount-NoneDescribeLogStreamsLogsAPI: true
+        AWSUsage-CallCount-NoneDescribeMaintenanceWindowsSSMAPI: false
         AWSUsage-CallCount-NoneDescribeManagedPrefixListsEC2API: false
         AWSUsage-CallCount-NoneDescribeMatchmakingConfigurationsGameLiftAPI: false
         AWSUsage-CallCount-NoneDescribeMatchmakingRuleSetsGameLiftAPI: false
@@ -4121,11 +4546,15 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeParameterGroupsDynamoDBAcceleratorAPI: false
         AWSUsage-CallCount-NoneDescribeParameterGroupsMemoryDBAPI: false
         AWSUsage-CallCount-NoneDescribeParametersDynamoDBAcceleratorAPI: false
+        AWSUsage-CallCount-NoneDescribeParametersSSMAPI: false
+        AWSUsage-CallCount-NoneDescribePatchBaselinesSSMAPI: false
+        AWSUsage-CallCount-NoneDescribePatchGroupsSSMAPI: false
         AWSUsage-CallCount-NoneDescribePendingMaintenanceActionsRDSAPI: false
         AWSUsage-CallCount-NoneDescribePlacementGroupsEC2API: false
         AWSUsage-CallCount-NoneDescribePoliciesEC2AutoScalingAPI: false
         AWSUsage-CallCount-NoneDescribePrefixListsEC2API: false
         AWSUsage-CallCount-NoneDescribeProjectsRekognitionAPI: false
+        AWSUsage-CallCount-NoneDescribeProvisionedCapacityElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneDescribePublicIpv4PoolsEC2API: false
         AWSUsage-CallCount-NoneDescribePullThroughCacheRulesECRAPI: false
         AWSUsage-CallCount-NoneDescribeRegionsEC2API: false
@@ -4134,7 +4563,9 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeReplaceRootVolumeTasksEC2API: false
         AWSUsage-CallCount-NoneDescribeReplicationGroupsElastiCacheAPI: false
         AWSUsage-CallCount-NoneDescribeReplicationInstancesDatabaseMigrationServiceAPI: false
+        AWSUsage-CallCount-NoneDescribeReplicationSubnetGroupsDatabaseMigrationServiceAPI: false
         AWSUsage-CallCount-NoneDescribeReplicationTasksDatabaseMigrationServiceAPI: false
+        AWSUsage-CallCount-NoneDescribeReportDefinitionsCostandUsageReportAPI: false
         AWSUsage-CallCount-NoneDescribeRepositoriesECRAPI: false
         AWSUsage-CallCount-NoneDescribeRepositoriesECRPublicAPI: false
         AWSUsage-CallCount-NoneDescribeRepositoryCreationTemplatesECRAPI: false
@@ -4142,7 +4573,9 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeReservedDBInstancesRDSAPI: false
         AWSUsage-CallCount-NoneDescribeReservedInstancesEC2API: false
         AWSUsage-CallCount-NoneDescribeReservedInstancesListingsEC2API: false
+        AWSUsage-CallCount-NoneDescribeReservedInstancesModificationsEC2API: false
         AWSUsage-CallCount-NoneDescribeReservedNodesMemoryDBAPI: false
+        AWSUsage-CallCount-NoneDescribeResourcePoliciesLogsAPI: false
         AWSUsage-CallCount-NoneDescribeRouteTablesEC2API: false
         AWSUsage-CallCount-NoneDescribeRuleEventBridgeAPI: false
         AWSUsage-CallCount-NoneDescribeRulesElasticLoadBalancingAPI: false
@@ -4156,6 +4589,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeScheduledActionsEC2AutoScalingAPI: false
         AWSUsage-CallCount-NoneDescribeSecretSecretsManagerAPI: false
         AWSUsage-CallCount-NoneDescribeSecurityGroupRulesEC2API: false
+        AWSUsage-CallCount-NoneDescribeSecurityGroupVpcAssociationsEC2API: false
         AWSUsage-CallCount-NoneDescribeSecurityGroupsEC2API: false
         AWSUsage-CallCount-NoneDescribeServerlessCacheSnapshotsElastiCacheAPI: false
         AWSUsage-CallCount-NoneDescribeServerlessCachesElastiCacheAPI: false
@@ -4222,7 +4656,9 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneDescribeVirtualInterfacesDirectConnectAPI: false
         AWSUsage-CallCount-NoneDescribeVolumeStatusEC2API: false
         AWSUsage-CallCount-NoneDescribeVolumesEC2API: false
+        AWSUsage-CallCount-NoneDescribeVolumesModificationsEC2API: false
         AWSUsage-CallCount-NoneDescribeVpcAttributeEC2API: false
+        AWSUsage-CallCount-NoneDescribeVpcBlockPublicAccessOptionsEC2API: false
         AWSUsage-CallCount-NoneDescribeVpcClassicLinkDnsSupportEC2API: false
         AWSUsage-CallCount-NoneDescribeVpcClassicLinkEC2API: false
         AWSUsage-CallCount-NoneDescribeVpcEndpointConnectionNotificationsEC2API: false
@@ -4261,8 +4697,10 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetAccountSettingECRAPI: false
         AWSUsage-CallCount-NoneGetAccountSettings20160819LambdaAPI: false
         AWSUsage-CallCount-NoneGetAccountStatusAuditManagerAPI: false
+        AWSUsage-CallCount-NoneGetAdministratorAccountMacieAPI: false
         AWSUsage-CallCount-NoneGetAdministratorAccountSecurityHubAPI: false
         AWSUsage-CallCount-NoneGetAlias20150331LambdaAPI: false
+        AWSUsage-CallCount-NoneGetAllowedImagesSettingsEC2API: false
         AWSUsage-CallCount-NoneGetAlternateContactAccountManagementAPI: false
         AWSUsage-CallCount-NoneGetAnalyzedResourceAccessAnalyzerAPI: false
         AWSUsage-CallCount-NoneGetAnalyzerAccessAnalyzerAPI: false
@@ -4297,11 +4735,13 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetBucketPublicAccessBlockS3API: false
         AWSUsage-CallCount-NoneGetBucketReplicationS3API: false
         AWSUsage-CallCount-NoneGetBucketRequestPaymentS3API: false
+        AWSUsage-CallCount-NoneGetBucketStatisticsMacieAPI: false
         AWSUsage-CallCount-NoneGetBucketTaggingS3API: false
         AWSUsage-CallCount-NoneGetBucketVersioningS3API: false
         AWSUsage-CallCount-NoneGetBucketWebsiteS3API: false
         AWSUsage-CallCount-NoneGetCertificateCertificateManagerAPI: false
         AWSUsage-CallCount-NoneGetChangeRoute53API: false
+        AWSUsage-CallCount-NoneGetClassificationExportConfigurationMacieAPI: false
         AWSUsage-CallCount-NoneGetClientCertificatesAPIGatewayAPI: false
         AWSUsage-CallCount-NoneGetComplianceDetailsByConfigRuleAWSConfigAPI: false
         AWSUsage-CallCount-NoneGetConsoleActionSetEnforcedCostExplorerAPI: false
@@ -4320,6 +4760,8 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetDetectorsFraudDetectorAPI: false
         AWSUsage-CallCount-NoneGetDimensionKeyDetailsPerformanceInsightsAPI: false
         AWSUsage-CallCount-NoneGetDimensionValuesCostExplorerAPI: false
+        AWSUsage-CallCount-NoneGetDistributionsLightsailAPI: false
+        AWSUsage-CallCount-NoneGetDocumentSSMAPI: false
         AWSUsage-CallCount-NoneGetDocumentationPartsAPIGatewayAPI: false
         AWSUsage-CallCount-NoneGetDocumentationVersionsAPIGatewayAPI: false
         AWSUsage-CallCount-NoneGetDomainDetailRoute53DomainsAPI: false
@@ -4337,7 +4779,9 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetEventSelectorsCloudTrailAPI: true
         AWSUsage-CallCount-NoneGetEventSourceMapping20150331LambdaAPI: false
         AWSUsage-CallCount-NoneGetEventTypesFraudDetectorAPI: false
+        AWSUsage-CallCount-NoneGetExternalModelsFraudDetectorAPI: false
         AWSUsage-CallCount-NoneGetFindingAggregatorSecurityHubAPI: false
+        AWSUsage-CallCount-NoneGetFindingStatisticsMacieAPI: false
         AWSUsage-CallCount-NoneGetFindingsFilterMacieAPI: false
         AWSUsage-CallCount-NoneGetFindingsGuardDutyAPI: false
         AWSUsage-CallCount-NoneGetFindingsMacieAPI: false
@@ -4364,26 +4808,37 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetInsightSummariesX-RayAPI: false
         AWSUsage-CallCount-NoneGetIntegrationAPIGatewayAPI: false
         AWSUsage-CallCount-NoneGetIntegrationsAPIGatewayAPI: false
+        AWSUsage-CallCount-NoneGetInvitationsCountMacieAPI: false
         AWSUsage-CallCount-NoneGetKeyPolicyKMSAPI: true
         AWSUsage-CallCount-NoneGetKeyRotationStatusKMSAPI: true
         AWSUsage-CallCount-NoneGetLabelsFraudDetectorAPI: false
         AWSUsage-CallCount-NoneGetLambdaFunctionRecommendationsComputeOptimizerAPI: false
         AWSUsage-CallCount-NoneGetLayerVersionByArn20181031LambdaAPI: false
+        AWSUsage-CallCount-NoneGetLifecyclePoliciesDataLifecycleManagerAPI: false
         AWSUsage-CallCount-NoneGetLifecyclePolicyECRAPI: false
         AWSUsage-CallCount-NoneGetLogEventsLogsAPI: true
         AWSUsage-CallCount-NoneGetLogGroupFieldsLogsAPI: false
+        AWSUsage-CallCount-NoneGetMacieSessionMacieAPI: false
         AWSUsage-CallCount-NoneGetManagedPrefixListEntriesEC2API: false
         AWSUsage-CallCount-NoneGetMetricDataCloudWatchAPI: true
         AWSUsage-CallCount-NoneGetMetricStatisticsCloudWatchAPI: true
         AWSUsage-CallCount-NoneGetMetricWidgetImageCloudWatchAPI: true
         AWSUsage-CallCount-NoneGetModelsAPIGatewayAPI: false
+        AWSUsage-CallCount-NoneGetModelsFraudDetectorAPI: false
+        AWSUsage-CallCount-NoneGetOperationsLightsailAPI: false
         AWSUsage-CallCount-NoneGetOutcomesFraudDetectorAPI: false
+        AWSUsage-CallCount-NoneGetParameterHistorySSMAPI: false
+        AWSUsage-CallCount-NoneGetParameterSSMAPI: false
+        AWSUsage-CallCount-NoneGetParametersByPathSSMAPI: false
+        AWSUsage-CallCount-NoneGetParametersSSMAPI: false
         AWSUsage-CallCount-NoneGetPolicy20150331LambdaAPI: false
         AWSUsage-CallCount-NoneGetPolicy20150331v2LambdaAPI: false
+        AWSUsage-CallCount-NoneGetPreferencesCostOptimizationHubAPI: false
         AWSUsage-CallCount-NoneGetPublicKeyKMSAPI: true
         AWSUsage-CallCount-NoneGetQueryExecutionAthenaAPI: false
         AWSUsage-CallCount-NoneGetQueryResultsAthenaAPI: false
         AWSUsage-CallCount-NoneGetQueryRuntimeStatisticsAthenaAPI: false
+        AWSUsage-CallCount-NoneGetRegionsLightsailAPI: false
         AWSUsage-CallCount-NoneGetRegistryPolicyECRAPI: false
         AWSUsage-CallCount-NoneGetRegistryScanningConfigurationECRAPI: false
         AWSUsage-CallCount-NoneGetRepositoryPolicyECRAPI: false
@@ -4411,8 +4866,10 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetSdkTypeAPIGatewayAPI: false
         AWSUsage-CallCount-NoneGetSdkTypesAPIGatewayAPI: false
         AWSUsage-CallCount-NoneGetSecretValueSecretsManagerAPI: false
+        AWSUsage-CallCount-NoneGetSecurityGroupsForVpcEC2API: false
         AWSUsage-CallCount-NoneGetSendQuotaSESAPI: false
         AWSUsage-CallCount-NoneGetServiceQuotaServiceQuotasAPI: true
+        AWSUsage-CallCount-NoneGetServiceSettingSSMAPI: false
         AWSUsage-CallCount-NoneGetSnapshotBlockPublicAccessStateEC2API: false
         AWSUsage-CallCount-NoneGetStackPolicyCloudFormationAPI: false
         AWSUsage-CallCount-NoneGetStageAPIGatewayAPI: false
@@ -4433,8 +4890,10 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneGetTrafficPolicyInstanceCountRoute53API: false
         AWSUsage-CallCount-NoneGetTrailStatusCloudTrailAPI: true
         AWSUsage-CallCount-NoneGetUsagePlansAPIGatewayAPI: false
+        AWSUsage-CallCount-NoneGetUsageStatisticsMacieAPI: false
         AWSUsage-CallCount-NoneGetVariablesFraudDetectorAPI: false
         AWSUsage-CallCount-NoneGetVpcLinksAPIGatewayAPI: false
+        AWSUsage-CallCount-NoneGetWebACLForResourceWAFAPI: false
         AWSUsage-CallCount-NoneGetWorkGroupAthenaAPI: false
         AWSUsage-CallCount-NoneInitiateLayerUploadECRAPI: true
         AWSUsage-CallCount-NoneInvocationsEventBridgeAPI: true
@@ -4455,12 +4914,14 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListApiDestinationsEventBridgeAPI: false
         AWSUsage-CallCount-NoneListApplicationsAWSAppConfigAPI: false
         AWSUsage-CallCount-NoneListApplicationsCloudWatchApplicationInsightsAPI: false
+        AWSUsage-CallCount-NoneListApplicationsEMRServerlessAPI: false
         AWSUsage-CallCount-NoneListApplicationsKinesisAnalyticsAPI: false
         AWSUsage-CallCount-NoneListApplicationsServiceCatalogAppRegistryAPI: false
         AWSUsage-CallCount-NoneListAppsListsFirewallManagerAPI: false
         AWSUsage-CallCount-NoneListAssessmentsAuditManagerAPI: false
         AWSUsage-CallCount-NoneListAssetModelsIoTSiteWiseAPI: false
         AWSUsage-CallCount-NoneListAssociatedAccessPoliciesEKSAPI: false
+        AWSUsage-CallCount-NoneListAssociationsSSMAPI: false
         AWSUsage-CallCount-NoneListAttributeGroupsServiceCatalogAppRegistryAPI: false
         AWSUsage-CallCount-NoneListAuthorizersIoTAPI: false
         AWSUsage-CallCount-NoneListAvailableResourceDimensionsPerformanceInsightsAPI: false
@@ -4475,32 +4936,46 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListChangeSetsCloudFormationAPI: false
         AWSUsage-CallCount-NoneListChannelsIVSAPI: false
         AWSUsage-CallCount-NoneListCidrCollectionsRoute53API: false
+        AWSUsage-CallCount-NoneListClassificationJobsMacieAPI: false
+        AWSUsage-CallCount-NoneListClustersAmazonEMRAPI: false
         AWSUsage-CallCount-NoneListClustersECSAPI: false
         AWSUsage-CallCount-NoneListClustersEKSAPI: false
+        AWSUsage-CallCount-NoneListClustersEMRAPI: true
         AWSUsage-CallCount-NoneListCodeSigningConfigsLambdaAPI: false
         AWSUsage-CallCount-NoneListComponentsGreengrassAPI: false
         AWSUsage-CallCount-NoneListComponentsImageBuilderAPI: false
         AWSUsage-CallCount-NoneListConfigsGroundStationAPI: false
+        AWSUsage-CallCount-NoneListConfigurationSetsSESAPI: false
         AWSUsage-CallCount-NoneListConnectionsCodeStarConnectionsAPI: false
+        AWSUsage-CallCount-NoneListConnectorDefinitionsGreengrassAPI: false
+        AWSUsage-CallCount-NoneListContactListsSESAPI: false
         AWSUsage-CallCount-NoneListContainerInstancesECSAPI: false
         AWSUsage-CallCount-NoneListContainerRecipesImageBuilderAPI: false
         AWSUsage-CallCount-NoneListContainersMediaStoreAPI: false
+        AWSUsage-CallCount-NoneListCoreDefinitionsGreengrassAPI: false
+        AWSUsage-CallCount-NoneListCostAllocationTagsCostExplorerAPI: false
         AWSUsage-CallCount-NoneListCustomDataIdentifiersMacieAPI: false
         AWSUsage-CallCount-NoneListDashboardsCloudWatchAPI: true
         AWSUsage-CallCount-NoneListDataCatalogsAthenaAPI: false
+        AWSUsage-CallCount-NoneListDataSetsDataExchangeAPI: false
         AWSUsage-CallCount-NoneListDatasetGroupsAmazonPersonalizeAPI: false
         AWSUsage-CallCount-NoneListDatasetsAmazonPersonalizeAPI: false
         AWSUsage-CallCount-NoneListDatasetsDataBrewAPI: false
         AWSUsage-CallCount-NoneListDelegatedAdministratorsOrganizationsAPI: false
         AWSUsage-CallCount-NoneListDetectorModelsIoTEventsAPI: false
         AWSUsage-CallCount-NoneListDetectorsGuardDutyAPI: false
+        AWSUsage-CallCount-NoneListDeviceDefinitionsGreengrassAPI: false
         AWSUsage-CallCount-NoneListDiscoveredResourcesAWSConfigAPI: false
         AWSUsage-CallCount-NoneListDistributionConfigurationsImageBuilderAPI: false
+        AWSUsage-CallCount-NoneListDocumentClassifiersComprehendAPI: false
+        AWSUsage-CallCount-NoneListDocumentsSSMAPI: false
         AWSUsage-CallCount-NoneListDomainsAWSCodeArtifactAPI: false
         AWSUsage-CallCount-NoneListDomainsRoute53DomainsAPI: false
         AWSUsage-CallCount-NoneListDomainsSageMakerAPI: false
+        AWSUsage-CallCount-NoneListEmailIdentitiesSESAPI: false
         AWSUsage-CallCount-NoneListEndpointsSageMakerAPI: false
         AWSUsage-CallCount-NoneListEnrollmentStatusesCostOptimizationHubAPI: false
+        AWSUsage-CallCount-NoneListEntityRecognizersComprehendAPI: false
         AWSUsage-CallCount-NoneListEnvironmentAccountConnectionsProtonAPI: false
         AWSUsage-CallCount-NoneListEventBusesEventBridgeAPI: false
         AWSUsage-CallCount-NoneListEventDataStoresCloudTrailAPI: true
@@ -4516,12 +4991,14 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListFindingsFiltersMacieAPI: false
         AWSUsage-CallCount-NoneListFindingsGuardDutyAPI: false
         AWSUsage-CallCount-NoneListFindingsMacieAPI: false
+        AWSUsage-CallCount-NoneListFirewallConfigsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListFirewallDomainListsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListFirewallPoliciesNetworkFirewallAPI: false
         AWSUsage-CallCount-NoneListFirewallRuleGroupAssociationsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListFirewallRuleGroupsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListFirewallsNetworkFirewallAPI: false
         AWSUsage-CallCount-NoneListFlowsAppFlowAPI: false
+        AWSUsage-CallCount-NoneListFunctionDefinitionsGreengrassAPI: false
         AWSUsage-CallCount-NoneListFunctionUrlConfigsLambdaAPI: false
         AWSUsage-CallCount-NoneListFunctions20150331LambdaAPI: false
         AWSUsage-CallCount-NoneListGatewaysIoTSiteWiseAPI: false
@@ -4548,14 +5025,19 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListInfrastructureConfigurationsImageBuilderAPI: false
         AWSUsage-CallCount-NoneListInputsIoTEventsAPI: false
         AWSUsage-CallCount-NoneListInsightsEKSAPI: false
+        AWSUsage-CallCount-NoneListInstanceAssociationsSSMAPI: false
         AWSUsage-CallCount-NoneListInstancesConnectAPI: true
+        AWSUsage-CallCount-NoneListInventoryEntriesSSMAPI: false
         AWSUsage-CallCount-NoneListJobTemplatesIoTAPI: false
+        AWSUsage-CallCount-NoneListJobsDataBrewAPI: false
         AWSUsage-CallCount-NoneListKeyRotationsKMSAPI: true
         AWSUsage-CallCount-NoneListKeysKMSAPI: true
         AWSUsage-CallCount-NoneListLayers20181031LambdaAPI: false
         AWSUsage-CallCount-NoneListLedgersQLDBAPI: false
         AWSUsage-CallCount-NoneListLocationsDataSyncAPI: false
+        AWSUsage-CallCount-NoneListLoggerDefinitionsGreengrassAPI: false
         AWSUsage-CallCount-NoneListMediaAnalysisJobsRekognitionAPI: false
+        AWSUsage-CallCount-NoneListMembersMacieAPI: false
         AWSUsage-CallCount-NoneListMembersSecurityHubAPI: false
         AWSUsage-CallCount-NoneListMeshesAppMeshAPI: false
         AWSUsage-CallCount-NoneListMessageMoveTasksSQSAPI: false
@@ -4570,6 +5052,8 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListNotificationConfigurationsAWSUserNotificationsAPI: false
         AWSUsage-CallCount-NoneListNotificationHubsAWSUserNotificationsAPI: false
         AWSUsage-CallCount-NoneListOperationsRoute53DomainsAPI: false
+        AWSUsage-CallCount-NoneListOpsMetadataSSMAPI: false
+        AWSUsage-CallCount-NoneListOrganizationAdminAccountsMacieAPI: false
         AWSUsage-CallCount-NoneListPipelinesCodePipelineAPI: false
         AWSUsage-CallCount-NoneListPipelinesSageMakerAPI: false
         AWSUsage-CallCount-NoneListPlaceIndexesLocationAPI: true
@@ -4585,6 +5069,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListProblemsCloudWatchApplicationInsightsAPI: false
         AWSUsage-CallCount-NoneListProfilingGroupsCodeGuruProfilerAPI: false
         AWSUsage-CallCount-NoneListProjectsCodeBuildAPI: false
+        AWSUsage-CallCount-NoneListProjectsDataBrewAPI: false
         AWSUsage-CallCount-NoneListProjectsLookoutforVisionAPI: false
         AWSUsage-CallCount-NoneListProtectionGroupsShieldAPI: false
         AWSUsage-CallCount-NoneListProtectionsShieldAPI: false
@@ -4597,6 +5082,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListReceiptFiltersSESAPI: false
         AWSUsage-CallCount-NoneListRecipesDataBrewAPI: false
         AWSUsage-CallCount-NoneListRecommendationSummariesCostOptimizationHubAPI: false
+        AWSUsage-CallCount-NoneListRecommendationsCostOptimizationHubAPI: false
         AWSUsage-CallCount-NoneListRecordingConfigurationsIVSAPI: false
         AWSUsage-CallCount-NoneListRecoveryPointsByBackupVaultBackupAPI: false
         AWSUsage-CallCount-NoneListRegionsAccountManagementAPI: false
@@ -4605,10 +5091,16 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListRepositoriesAWSCodeArtifactAPI: false
         AWSUsage-CallCount-NoneListRepositoriesCodeCommitAPI: false
         AWSUsage-CallCount-NoneListRequestedServiceQuotaChangeHistoryByQuotaServiceQuotasAPI: true
+        AWSUsage-CallCount-NoneListRequestedServiceQuotaChangeHistoryServiceQuotasAPI: true
+        AWSUsage-CallCount-NoneListResolverConfigsRoute53ResolverAPI: false
+        AWSUsage-CallCount-NoneListResolverDnssecConfigsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListResolverEndpointsRoute53ResolverAPI: false
+        AWSUsage-CallCount-NoneListResolverQueryLogConfigAssociationsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListResolverQueryLogConfigsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListResolverRuleAssociationsRoute53ResolverAPI: false
         AWSUsage-CallCount-NoneListResolverRulesRoute53ResolverAPI: false
+        AWSUsage-CallCount-NoneListResourceDataSyncSSMAPI: false
+        AWSUsage-CallCount-NoneListResourceDefinitionsGreengrassAPI: false
         AWSUsage-CallCount-NoneListResourceRecordSetsRoute53API: false
         AWSUsage-CallCount-NoneListResourceSetsFirewallManagerAPI: false
         AWSUsage-CallCount-NoneListResourceTagsKMSAPI: true
@@ -4630,6 +5122,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListServiceProfilesIoTWirelessAPI: false
         AWSUsage-CallCount-NoneListServiceQuotasServiceQuotasAPI: true
         AWSUsage-CallCount-NoneListServicesECSAPI: false
+        AWSUsage-CallCount-NoneListServicesServiceQuotasAPI: true
         AWSUsage-CallCount-NoneListShardsKinesisDataStreamsAPI: false
         AWSUsage-CallCount-NoneListSigningProfilesSignerAPI: false
         AWSUsage-CallCount-NoneListSinksObservabilityAccessManagerAPI: true
@@ -4642,11 +5135,13 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListStreamConsumersKinesisDataStreamsAPI: false
         AWSUsage-CallCount-NoneListStreamsKinesisDataStreamsAPI: false
         AWSUsage-CallCount-NoneListStreamsKinesisVideoStreamsAPI: false
+        AWSUsage-CallCount-NoneListSubscriptionDefinitionsGreengrassAPI: false
         AWSUsage-CallCount-NoneListSubscriptionsByTopicSNSAPI: true
         AWSUsage-CallCount-NoneListSubscriptionsSNSAPI: true
         AWSUsage-CallCount-NoneListTags20170331LambdaAPI: false
         AWSUsage-CallCount-NoneListTagsCloudTrailAPI: true
         AWSUsage-CallCount-NoneListTagsForCertificateCertificateManagerAPI: false
+        AWSUsage-CallCount-NoneListTagsForDeliveryStreamKinesisFirehoseAPI: true
         AWSUsage-CallCount-NoneListTagsForDomainRoute53DomainsAPI: false
         AWSUsage-CallCount-NoneListTagsForResourceCloudWatchAPI: true
         AWSUsage-CallCount-NoneListTagsForResourceDatabaseMigrationServiceAPI: false
@@ -4657,6 +5152,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListTagsForResourceRDSAPI: false
         AWSUsage-CallCount-NoneListTagsForResourceRoute53API: false
         AWSUsage-CallCount-NoneListTagsForResourceSNSAPI: true
+        AWSUsage-CallCount-NoneListTagsForResourceSSMAPI: false
         AWSUsage-CallCount-NoneListTagsForResourceSchedulerAPI: false
         AWSUsage-CallCount-NoneListTagsForResourceShieldAPI: false
         AWSUsage-CallCount-NoneListTagsForStreamKinesisDataStreamsAPI: false
@@ -4675,16 +5171,22 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneListTrackersLocationAPI: true
         AWSUsage-CallCount-NoneListTrafficPoliciesRoute53API: false
         AWSUsage-CallCount-NoneListTrailsCloudTrailAPI: true
+        AWSUsage-CallCount-NoneListUpdatesEKSAPI: false
         AWSUsage-CallCount-NoneListUserPoolsCognitoUserPoolsAPI: false
         AWSUsage-CallCount-NoneListVaultsAmazonS3GlacierAPI: false
         AWSUsage-CallCount-NoneListVersionsByFunction20150331LambdaAPI: false
+        AWSUsage-CallCount-NoneListVirtualClustersEMRContainersAPI: false
+        AWSUsage-CallCount-NoneListVirtualNodesAppMeshAPI: false
         AWSUsage-CallCount-NoneListVirtualServicesAppMeshAPI: false
         AWSUsage-CallCount-NoneListVolumesStorageGatewayAPI: false
+        AWSUsage-CallCount-NoneListWebACLsWAFAPI: false
+        AWSUsage-CallCount-NoneListWebhooksCodePipelineAPI: false
         AWSUsage-CallCount-NoneListWorkGroupsAthenaAPI: false
         AWSUsage-CallCount-NoneListWorkflowsTransferAPI: false
         AWSUsage-CallCount-NoneListWorkspacesIoTTwinMakerAPI: false
         AWSUsage-CallCount-NoneListWorkspacesPrometheusAPI: false
         AWSUsage-CallCount-NoneLookupEventsCloudTrailAPI: true
+        AWSUsage-CallCount-NoneModifyCacheParameterGroupElastiCacheAPI: false
         AWSUsage-CallCount-NoneModifyDBClusterParameterGroupRDSAPI: false
         AWSUsage-CallCount-NoneModifyDBClusterRDSAPI: false
         AWSUsage-CallCount-NoneModifyDBClusterSnapshotAttributeRDSAPI: false
@@ -4697,6 +5199,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneModifyRuleElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneModifyTargetGroupAttributesElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneModifyVpcEndpointEC2API: false
+        AWSUsage-CallCount-NoneModifyVpcEndpointServiceConfigurationEC2API: false
         AWSUsage-CallCount-NoneModifyVpcEndpointServicePermissionsEC2API: false
         AWSUsage-CallCount-NonePublishVersion20150331LambdaAPI: false
         AWSUsage-CallCount-NonePurgeQueueSQSAPI: false
@@ -4719,6 +5222,8 @@ usage_metric_supported:
         AWSUsage-CallCount-NonePutLogEventsLogsAPI: true
         AWSUsage-CallCount-NonePutMetricAlarmCloudWatchAPI: true
         AWSUsage-CallCount-NonePutMetricDataCloudWatchAPI: true
+        AWSUsage-CallCount-NonePutParameterSSMAPI: false
+        AWSUsage-CallCount-NonePutResourcePolicyLogsAPI: false
         AWSUsage-CallCount-NonePutResourcePolicySecretsManagerAPI: false
         AWSUsage-CallCount-NonePutRetentionPolicyLogsAPI: true
         AWSUsage-CallCount-NonePutRuleEventBridgeAPI: false
@@ -4729,6 +5234,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneRedeemCodeCloudShellAPI: false
         AWSUsage-CallCount-NoneRefreshTrustedAdvisorCheckSupportAPI: false
         AWSUsage-CallCount-NoneRegisterInstancesWithLoadBalancerElasticLoadBalancingAPI: false
+        AWSUsage-CallCount-NoneRegisterManagedInstanceSSMAPI: false
         AWSUsage-CallCount-NoneRegisterScalableTargetEC2AutoScalingAPI: false
         AWSUsage-CallCount-NoneRegisterTargetsElasticLoadBalancingAPI: false
         AWSUsage-CallCount-NoneRegisterTaskDefinitionECSAPI: false
@@ -4752,6 +5258,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneSetRepositoryPolicyECRAPI: false
         AWSUsage-CallCount-NoneSetSubscriptionAttributesSNSAPI: true
         AWSUsage-CallCount-NoneSetTopicAttributesSNSAPI: true
+        AWSUsage-CallCount-NoneStartAutomationExecutionSSMAPI: true
         AWSUsage-CallCount-NoneStartDBClusterRDSAPI: false
         AWSUsage-CallCount-NoneStartDBInstanceRDSAPI: false
         AWSUsage-CallCount-NoneStartEnvironmentCloudShellAPI: false
@@ -4785,9 +5292,12 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneUpdateAlias20150331LambdaAPI: false
         AWSUsage-CallCount-NoneUpdateApiAPIGatewayAPI: false
         AWSUsage-CallCount-NoneUpdateAutoScalingGroupEC2AutoScalingAPI: false
+        AWSUsage-CallCount-NoneUpdateClusterConfigEKSAPI: false
+        AWSUsage-CallCount-NoneUpdateClusterVersionEKSAPI: false
         AWSUsage-CallCount-NoneUpdateEventSourceMapping20150331LambdaAPI: false
         AWSUsage-CallCount-NoneUpdateFunctionCode20150331v2LambdaAPI: false
         AWSUsage-CallCount-NoneUpdateFunctionConfiguration20150331v2LambdaAPI: false
+        AWSUsage-CallCount-NoneUpdateInstanceInformationSSMAPI: false
         AWSUsage-CallCount-NoneUpdateNodegroupVersionEKSAPI: false
         AWSUsage-CallCount-NoneUpdateScheduleSchedulerAPI: false
         AWSUsage-CallCount-NoneUpdateStackCloudFormationAPI: false
@@ -4798,6 +5308,7 @@ usage_metric_supported:
         AWSUsage-CallCount-NoneValidatePolicyAccessAnalyzerAPI: false
         AWSUsage-CallCount-NoneValidateResourcePolicySecretsManagerAPI: false
         AWSUsage-ErrorCount-NoneDescribeClusterEMRAPI: false
+        AWSUsage-ErrorCount-NoneListClustersEMRAPI: false
         AWSUsage-ErrorCount-NoneRunJobFlowEMRAPI: false
         AWSUsage-ErrorCount-NoneTerminateJobFlowsEMRAPI: false
         AWSUsage-ResourceCount-DDLActiveQueryCountAthenaResource: true
@@ -4812,10 +5323,12 @@ usage_metric_supported:
         AWSUsage-ResourceCount-NoneApproximateNumberOfFilterPoliciesSNSResource: true
         AWSUsage-ResourceCount-NoneApproximateNumberOfPendingSubscriptionsSNSResource: true
         AWSUsage-ResourceCount-NoneApproximateNumberOfTopicsSNSResource: true
+        AWSUsage-ResourceCount-NoneCachesPerRegionElastiCacheResource: true
         AWSUsage-ResourceCount-NoneCertificatesPerApplicationLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneCertificatesPerNetworkLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneClassicLoadBalancersPerRegionElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneConcurrentAutomationUsageSSMResource: true
+        AWSUsage-ResourceCount-NoneCustomEndpointsPerDBClusterRDSResource: false
         AWSUsage-ResourceCount-NoneDBClusterParameterGroupsRDSResource: false
         AWSUsage-ResourceCount-NoneDBClustersRDSResource: false
         AWSUsage-ResourceCount-NoneDBInstancesRDSResource: false
@@ -4827,22 +5340,35 @@ usage_metric_supported:
         AWSUsage-ResourceCount-NoneExperimentTemplatesFISResource: true
         AWSUsage-ResourceCount-NoneGeneralPurposeBucketsS3Resource: true
         AWSUsage-ResourceCount-NoneInsightRuleCloudWatchResource: true
+        AWSUsage-ResourceCount-NoneKeysPerAccountKMSResource: true
         AWSUsage-ResourceCount-NoneListenersPerApplicationLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneListenersPerClassicLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneListenersPerNetworkLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneManualClusterSnapshotsRDSResource: false
         AWSUsage-ResourceCount-NoneManualSnapshotsRDSResource: false
+        AWSUsage-ResourceCount-NoneMemcachedNodesPerClusterElastiCacheResource: true
         AWSUsage-ResourceCount-NoneNetworkLoadBalancersENIsPerVPCElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneNetworkLoadBalancersPerRegionElasticLoadBalancingResource: true
+        AWSUsage-ResourceCount-NoneNodesPerClusterElastiCacheResource: true
+        AWSUsage-ResourceCount-NoneNodesPerRegionElastiCacheResource: true
         AWSUsage-ResourceCount-NoneNumberOfAutoScalingGroupAutoScalingResource: true
         AWSUsage-ResourceCount-NoneNumberOfMessagesPublishedPerAccountSNSResource: true
         AWSUsage-ResourceCount-NoneOnDemandFargateResource: false
         AWSUsage-ResourceCount-NoneOptionGroupsRDSResource: false
+        AWSUsage-ResourceCount-NoneParameterGroupElastiCacheResource: true
+        AWSUsage-ResourceCount-NoneParentConcurrentAutomationUsageSSMResource: true
+        AWSUsage-ResourceCount-NoneProvisionedShardsKinesisDataStreamsResource: false
+        AWSUsage-ResourceCount-NoneProxiesRDSResource: true
+        AWSUsage-ResourceCount-NoneReadReplicasPerMasterRDSResource: true
         AWSUsage-ResourceCount-NoneRegisteredInstancesPerClassicLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneRoutingRulesPerApplicationLoadBalancerElasticLoadBalancingResource: true
+        AWSUsage-ResourceCount-NoneSnapshotsPerDayPerCacheElastiCacheResource: true
         AWSUsage-ResourceCount-NoneSpotFargateResource: false
         AWSUsage-ResourceCount-NoneStackInstanceOperationsCloudFormationResource: true
         AWSUsage-ResourceCount-NoneStackSetsCloudFormationResource: true
+        AWSUsage-ResourceCount-NoneSubnetGroupElastiCacheResource: true
+        AWSUsage-ResourceCount-NoneSubnetsPerDBSubnetGroupRDSResource: true
+        AWSUsage-ResourceCount-NoneSubnetsPerSubnetGroupElastiCacheResource: true
         AWSUsage-ResourceCount-NoneTableCountDynamoDBResource: false
         AWSUsage-ResourceCount-NoneTargetGroupsPerApplicationLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneTargetGroupsPerRegionElasticLoadBalancingResource: true
@@ -4851,6 +5377,9 @@ usage_metric_supported:
         AWSUsage-ResourceCount-NoneTargetsPerNetworkLoadBalancerElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneTargetsPerTargetGroupPerRegionElasticLoadBalancingResource: true
         AWSUsage-ResourceCount-NoneTrailCloudTrailResource: true
+        AWSUsage-ResourceCount-NoneUserElastiCacheResource: true
+        AWSUsage-ResourceCount-NoneUserGroupElastiCacheResource: true
+        AWSUsage-ResourceCount-NoneUsersPerUserGroupElastiCacheResource: true
         AWSUsage-ResourceCount-Noneendpointml.g4dn.xlargeSageMakerResource: true
         AWSUsage-ResourceCount-Noneendpointtotal_instance_countSageMakerResource: true
         AWSUsage-ResourceCount-Nonenotebook-instanceml.t2.mediumSageMakerResource: true
@@ -4867,6 +5396,7 @@ usage_metric_supported:
         AWSUsage-ThrottleCount-NoneDescribeClusterEMRAPI: false
         AWSUsage-ThrottleCount-NoneGetMetricDataCloudWatchAPI: true
         AWSUsage-ThrottleCount-NoneGetMetricStatisticsCloudWatchAPI: true
+        AWSUsage-ThrottleCount-NoneListClustersEMRAPI: false
         AWSUsage-ThrottleCount-NoneListMetricsCloudWatchAPI: true
         AWSUsage-ThrottleCount-NoneListTagsForResourceCloudWatchAPI: true
         AWSUsage-ThrottleCount-NonePutMetricAlarmCloudWatchAPI: true
